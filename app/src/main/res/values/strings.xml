@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">PhysicsApp</string>
+    <string name="equations">Equations</string>
+    <string name="variables">Variables</string>
+    <string name="constants">Constants</string>
+    <string name="other">Other</string>
+    <string name="search">Search</string>
 </resources>

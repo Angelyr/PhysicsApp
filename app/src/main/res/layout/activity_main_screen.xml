@@ -8,60 +8,67 @@
 
     <Button
         android:id="@+id/variablesBtn"
-        android:layout_width="129dp"
+        android:layout_width="220dp"
         android:layout_height="102dp"
-        android:text="Variables"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="102dp"
-        android:layout_marginRight="42dp"
-        app:layout_constraintRight_toRightOf="parent" />
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/variables"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/equationsBtn" />
 
     <Button
         android:id="@+id/constantsBtn"
-        android:layout_width="129dp"
+        android:layout_width="220dp"
         android:layout_height="102dp"
-        android:text="Constants"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="159dp"
-        android:layout_marginLeft="42dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/otherBtn"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        app:layout_constraintHorizontal_bias="0.0" />
+        android:layout_marginTop="8dp"
+        android:text="@string/constants"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/variablesBtn" />
 
     <Button
         android:id="@+id/otherBtn"
-        android:layout_width="129dp"
+        android:layout_width="220dp"
         android:layout_height="102dp"
-        android:text="Other"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="159dp"
-        android:layout_marginRight="42dp"
-        app:layout_constraintRight_toRightOf="parent" />
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/other"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constantsBtn" />
 
     <Button
         android:id="@+id/equationsBtn"
-        android:layout_width="129dp"
-        android:layout_height="102dp"
-        android:layout_marginLeft="42dp"
+        android:layout_width="220dp"
+        android:layout_height="104dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="102dp"
-        android:text="Equations"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="8dp"
+        android:text="@string/equations"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/variablesBtn"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Search"
-        tools:layout_editor_absoluteY="32dp"
-        android:layout_marginRight="8dp"
+        android:text="@string/search"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
