@@ -5,4 +5,14 @@
     <string name="constants">Constants</string>
     <string name="other">Other</string>
     <string name="search">Search</string>
+    <string name="tempEquation">tempEquation</string>
+
+    <string-array name="equationsArray">
+        <item>F = m * a</item>
+        <item>W = m * g</item>
+        <item>p = m * v</item>
+        <item>f = 1 / T</item>
+        <item>w = 2 * π * f</item>
+        <item>P = F / A</item>
+    </string-array>
 </resources>
