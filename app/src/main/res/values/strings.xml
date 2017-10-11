@@ -364,4 +364,168 @@
     <item>Shear Strain</item>
     </string-array>
 
+
+    <string-array name="CommonConstants">
+        <item>i</item>
+        <item>Imaginary unit</item>
+        <item>(-1)^(1/2)</item>
+        <item>π</item>
+        <item>Pi</item>
+        <item>3.14159265358979323846264338327950288</item>
+        <item>e</item>
+        <item>Euler's number</item>
+        <item>2.71828182845904523536028747135266249</item>
+        <item>\gamma </item>
+        <item>Euler–Mascheroni constant</item>
+        <item>0.57721566490153286060651209008240243</item>
+        <item>Φ</item>
+        <item>Golden ratio</item>
+        <item>1.61803398874989484820458683436563811</item>
+        <item>M_1</item>
+        <item>Meissel–Mertens constant</item>
+        <item>0.26149721284764278375542683860869585</item>
+        <item>\beta </item>
+        <item>Bernstein's constant</item>
+        <item>0.28016949902386913303</item>
+        <item>l_P</item>
+        <item>Planck length</item>
+        <item>1.616229*10^(−35) m</item>
+        <item>m_P</item>
+        <item>Planck mass</item>
+        <item>2.176470*10^(−8) kg</item>
+        <item>t_P</item>
+        <item>Planck time</item>
+        <item>5.39116*10^(−44) s</item>
+        <item>q_P</item>
+        <item>Planck charge</item>
+        <item>1.875545956*10^(−18) C</item>
+        <item>T_P</item>
+        <item>Planck temperature</item>
+        <item>1.416808*10^32 K</item>
+    </string-array>
+
+    <string-array name="PhysicsConstants">
+        <item>c</item>
+        <item>speed of light in vacuum</item>
+        <item>299792458 m*s^(-1)</item>
+        <item>G</item>
+        <item>Newtonian constant of gravitation</item>
+        <item>6.674*10^(−8) cm^3*g^(−1)*s^(−2)</item>
+        <item>h</item>
+        <item>Planck constant</item>
+        <item>6.626070040*10^(−34) J*s</item>
+        <item>μ_0</item>
+        <item>magnetic constant (vacuum permeability)</item>
+        <item>1.256637061*10^(−6)*N*A^(−2)</item>
+        <item>ε_0</item>
+        <item>electric constant (vacuum permittivity)</item>
+        <item>8.854187817*10^(−12)*F*m^(−1)</item>
+        <item>Z_0</item>
+        <item>characteristic impedance of vacuum</item>
+        <item>376.730313461Ω</item>
+        <item>k_e</item>
+        <item>Coulomb's constant</item>
+        <item>8.9875517873681764*10^9 kg*m^3*s^(−4)*A^(−2)</item>
+        <item>e</item>
+        <item>elementary charge</item>
+        <item>1.6021766208*10^(−19) C</item>
+        <item>μ_B</item>
+        <item>Bohr magneton</item>
+        <item>9.274009994*10^(−24) J*T^(−1)</item>
+        <item>G_0</item>
+        <item>conductance quantum</item>
+        <item>7.7480917310*10^(−5) S</item>
+        <item>G_0^(-1)</item>
+        <item>inverse conductance quantum</item>
+        <item>12906.4037278 Ω</item>
+        <item>K_J</item>
+        <item>Josephson constant</item>
+        <item>4.835978525*10^14 Hz*V^(−1)</item>
+        <item>Φ_0</item>
+        <item>magnetic flux quantum</item>
+        <item>2.067833831*10^(−15) Wb</item>
+        <item>μ_N</item>
+        <item>nuclear magneton</item>
+        <item>5.050783699*10^(−27) J*T^(−1)</item>
+        <item>R_K</item>
+        <item>von Klitzing constant</item>
+        <item>25812.8074555 Ω</item>
+        <item>a_0</item>
+        <item>Bohr radius</item>
+        <item>5.2917721067*10^(−11) m</item>
+        <item>r_e</item>
+        <item>classical electron radius</item>
+        <item>2.8179403227(19)*10^(−15) m</item>
+        <item>m_e</item>
+        <item>electron mass</item>
+        <item>9.10938356*10^(−31) kg</item>
+        <item>G_F</item>
+        <item>Fermi coupling constant</item>
+        <item>1.1663787*10^(−5) GeV^(−2)</item>
+        <item>E_h</item>
+        <item>Hartree energy</item>
+        <item>4.359744650*10^(−18) J</item>
+        <item>m_p</item>
+        <item>proton mass</item>
+        <item>1.672621898*10^(−27) kg</item>
+        <item>h/2m_e</item>
+        <item>quantum of circulation</item>
+        <item>3.6369475486*10^(−4) m^2*s^(−1)</item>
+        <item>m_u</item>
+        <item>Atomic mass constant</item>
+        <item>1.660539040*10^(−27) kg</item>
+        <item>N_A</item>
+        <item>Avogadro constant</item>
+        <item>6.022140857*10^23 mol^(−1)</item>
+        <item>k_B</item>
+        <item>Boltzmann constant</item>
+        <item>1.38064852*10^(−23) J*K^(−1)</item>
+        <item>F</item>
+        <item>Faraday constant</item>
+        <item>96485.33289 C*mol^(−1)</item>
+        <item>c_1</item>
+        <item>first radiation constant</item>
+        <item>3.741771790*10^(−16) W*m^2</item>
+        <item>c_(1L)</item>
+        <item>first radiation constant</item>
+        <item>1.191042953*10^(−16) W*m^2*s*r^(−1)</item>
+        <item>n_0</item>
+        <item>Loschmidt constant</item>
+        <item>2.6867811*10^25 m^(−3)</item>
+        <item>R</item>
+        <item>gas constant</item>
+        <item>8.3144598 J*mol^(−1)*K^(−1)</item>
+        <item>N_Ah</item>
+        <item>molar Planck constant</item>
+        <item>3.9903127110*10^(−10) J*s*mol^(−1)</item>
+        <item>V_m</item>
+        <item>molar volume of an ideal gas</item>
+        <item>2.2413962*10^(−2) m^3*mol^(−1)</item>
+        <item>σ</item>
+        <item>Stefan–Boltzmann constant</item>
+        <item>5.670367*10^(−8) W*m^(−2)*K^(−4)</item>
+        <item>b_(energy)</item>
+        <item>Wien displacement law constant</item>
+        <item>2.8977729*10^(−3) m*K</item>
+        <item>b_(entropy)</item>
+        <item>Wien-Bonal entropy displacement law constant</item>
+        <item>3.0029152*10^(−3) m*K</item>
+        <item>K_(J-90)</item>
+        <item>conventional value of Josephson constant</item>
+        <item>4.835979*10^14 Hz*V^(−1)</item>
+        <item>R_(K-90)</item>
+        <item>conventional value of von Klitzing constant</item>
+        <item>25812.807 Ω</item>
+        <item>M_u</item>
+        <item>molar mass</item>
+        <item>1*10^(−3) kg*mol^(−1)</item>
+        <item>g_n</item>
+        <item>standard acceleration of gravity</item>
+        <item>9.80665 m*s^(−2)</item>
+        <item>atm</item>
+        <item>standard atmosphere</item>
+        <item>101325 Pa</item>
+    </string-array>
+
+
 </resources>
