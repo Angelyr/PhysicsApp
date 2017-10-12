@@ -374,7 +374,7 @@
         <item>Pi</item>
         <item>3.14159265358979323846264338327950288</item>
         <item>e</item>
-        <item>Euler's number</item>
+        <item>Euler\'s number</item>
         <item>2.71828182845904523536028747135266249</item>
         <item>\gamma </item>
         <item>Euler–Mascheroni constant</item>
@@ -386,7 +386,7 @@
         <item>Meissel–Mertens constant</item>
         <item>0.26149721284764278375542683860869585</item>
         <item>\beta </item>
-        <item>Bernstein's constant</item>
+        <item>Bernstein\'s constant</item>
         <item>0.28016949902386913303</item>
         <item>l_P</item>
         <item>Planck length</item>
@@ -425,7 +425,7 @@
         <item>characteristic impedance of vacuum</item>
         <item>376.730313461Ω</item>
         <item>k_e</item>
-        <item>Coulomb's constant</item>
+        <item>Coulomb\'s constant</item>
         <item>8.9875517873681764*10^9 kg*m^3*s^(−4)*A^(−2)</item>
         <item>e</item>
         <item>elementary charge</item>
