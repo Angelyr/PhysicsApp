@@ -6,8 +6,9 @@
     <string name="other">Other</string>
     <string name="search">Search</string>
     <string name="tempEquation">tempEquation</string>
+    <string name="equation">Equation</string>
 
-    <string-array name="mechanicsArray">
+    <string-array name="mechanicsEquations">
         <item>v̅ = Δs / Δt</item>
         <item>v = ds / dt</item>
         <item>a̅ = Δv / Δt</item>
@@ -145,7 +146,7 @@
         <item>f ≈ r / 2</item>
     </string-array>
 
-    <string-array name="electricityMagnetism">
+    <string-array name="electricityMagnetismEquations">
         <item>F = k * q1 * q2 / r^2</item>
         <item>F = 1 / (4 * π * ε0) * (q1 * q2 / r^2) * r̂</item>
         <item>E = FE / q</item>
@@ -198,11 +199,11 @@
         <item>∇ × B = μ0 * ε0 * ∂ * E / ∂ / t + μ0 * J</item>
     </string-array>
 
-    <string-array name="modernPhysics">
-        <item>t' = t / √ (1 − v^2 / c^2)</item>
-        <item>ℓ' = ℓ * √ (1 − v^2 / c^2)</item>
-        <item>m' = m √ (1 − v^2 / c^2)</item>
-        <item>u' = u + v / (1 + u * v / c^2)</item>
+    <string-array name="modernEquations">
+        <item>t\' = t / √ (1 − v^2 / c^2)</item>
+        <item>ℓ\' = ℓ * √ (1 − v^2 / c^2)</item>
+        <item>m\' = m √ (1 − v^2 / c^2)</item>
+        <item>u\' = u + v / (1 + u * v / c^2)</item>
         <item>E = m * c^2 / √ (1 − v^2 / c^2)</item>
         <item>p = m * v / √(1 − v^2 / c^2)</item>
         <item>E^2 = p^2 * c^2 + m0^2 * c^4</item>
@@ -215,7 +216,7 @@
         <item>E * ψ(r) = − h^2  / 2 * m * ∇^2 * ψ(r) + V(r) * ψ(r)</item>
         <item>Δpx * Δx ≥ ℏ / 2</item>
         <item>ΔE * Δt ≥ ℏ / 2</item>
-        <item>1 / λ = - R∞ * (1 / n^2 - 1 / n0^2)</item>
+        <item>1 / λ = - R∞ * ((1 / n^2) - (1 / n0^2))</item>
         <item>N = N0 * 2^(−t / τ)</item>
 
     </string-array>
