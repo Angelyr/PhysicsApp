@@ -8,12 +8,12 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 
-class EquationAdapter extends BaseAdapter {
+class ListAdapter extends BaseAdapter {
 
     private LayoutInflater mInflator;
     private String[] equations;
 
-    EquationAdapter(Context c, String[] e)
+    ListAdapter(Context c, String[] e)
     {
         equations = e;
         mInflator = (LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -37,7 +37,7 @@ class EquationAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        View v = mInflator.inflate(R.layout.equations_detail, null);
+        View v = mInflator.inflate(R.layout.list_detail, null);
         TextView equationTextView = (TextView) v.findViewById(R.id.equationTextView);
 
         String equation = equations[position];
