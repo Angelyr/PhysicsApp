@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".EquationsScreen"></activity>
+        <activity android:name=".UnitConverter"></activity>
     </application>
 
 </manifest>

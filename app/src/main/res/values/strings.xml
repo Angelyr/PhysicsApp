@@ -7,6 +7,12 @@
     <string name="search">Search</string>
     <string name="tempEquation">tempEquation</string>
     <string name="equation">Equation</string>
+    <string name="UnitConverter">Unit Converter</string>
+    <string name="ConvertFrom">Unit Convert From</string>
+    <string name="ConvertTo">Unit Convert To</string>
+    <string name="EnterExpression">Enter Expression</string>
+    <string name="Convert">Convert</string>
+    <string name="result">Result</string>
 
     <string-array name="mechanicsEquations">
         <item>v̅ = Δs / Δt</item>

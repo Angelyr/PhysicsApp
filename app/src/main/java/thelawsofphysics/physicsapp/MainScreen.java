@@ -22,5 +22,15 @@ public class MainScreen extends AppCompatActivity {
                 startActivity(startIntent);
             }
         });
+
+        Button converterBtn = (Button)findViewById(R.id.converterBtn);
+        converterBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), UnitConverter.class);
+                startActivity(startIntent);
+            }
+        });
     }
 }
