@@ -45,8 +45,7 @@ class ListAdapter extends BaseAdapter {
         TextView equationTextView = (TextView) v.findViewById(R.id.equationTextView);
 
         String text = list[position];
-        clickableText(equationTextView,text);
-        //equationTextView.setText(text);
+        clickableText(equationTextView, text);
 
         return v;
     }
