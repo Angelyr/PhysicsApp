@@ -23,7 +23,7 @@ public class MainScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent startIntent = new Intent(getApplicationContext(), List.class);
-                list = res.getStringArray(R.array.mechanicsEquations);
+                list = res.getStringArray(R.array.equations);
                 startIntent.putExtra("display",list);
                 startActivity(startIntent);
             }
@@ -47,7 +47,7 @@ public class MainScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent startIntent = new Intent(getApplicationContext(), List.class);
-                list = res.getStringArray(R.array.CommonConstants);
+                list = res.getStringArray(R.array.constants);
                 startIntent.putExtra("display", list);
                 startActivity(startIntent);
             }
