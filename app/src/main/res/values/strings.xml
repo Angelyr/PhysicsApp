@@ -7,6 +7,12 @@
     <string name="search">Search</string>
     <string name="tempEquation">tempEquation</string>
     <string name="equation">Equation</string>
+    <string name="UnitConverter">Unit Converter</string>
+    <string name="ConvertFrom">Unit Convert From</string>
+    <string name="ConvertTo">Unit Convert To</string>
+    <string name="EnterExpression">Enter Expression</string>
+    <string name="Convert">Convert</string>
+    <string name="result">Result</string>
 
     <string-array name="equations">
         <item>v̅ = Δs / Δt</item>
@@ -893,6 +899,33 @@
         <item>atm</item>
         <item>standard atmosphere</item>
         <item>101325 Pa</item>
+    </string-array>
+
+    <string-array name="lengthUnits">
+        <item>kilometer</item>
+        <item>1</item>
+        <item>meter</item>
+        <item>1000</item>
+        <item>centimeter</item>
+        <item>100000</item>
+        <item>millimeter</item>
+        <item>1000000</item>
+        <item>mile</item>
+        <item>0.6213711922</item>
+        <item>yard</item>
+        <item>1093.613298</item>
+        <item>feet</item>
+        <item>3280.839895</item>
+        <item>inch</item>
+        <item>39370.07874</item>
+        <item>league</item>
+        <item>0.2071237307</item>
+        <item>furlong</item>
+        <item>4.970969538</item>
+        <item>rod</item>
+        <item>198.8387815</item>
+        <item>chain</item>
+        <item>49.70969538</item>
     </string-array>
 
 
