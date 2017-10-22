@@ -12,16 +12,13 @@
         <activity android:name=".MainScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
         <activity android:name=".EquationsScreen"></activity>
+
         <activity android:name=".UnitConverter"></activity>
-=======
         <activity android:name=".List"></activity>
->>>>>>> origin/master
     </application>
 
 </manifest>
