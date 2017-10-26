@@ -2,9 +2,8 @@ package thelawsofphysics.physicsapp;
 
 import android.content.Context;
 import android.text.SpannableStringBuilder;
+import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
-import android.text.style.ClickableSpan;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,12 +15,13 @@ class ListAdapter extends BaseAdapter {
 
     private LayoutInflater mInflator;
     private String[] list;
+    private Context myContext;
 
     ListAdapter(Context c, String[] l)
     {
         list = l;
         mInflator = (LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
+        myContext = c;
     }
     @Override
     public int getCount() {
@@ -54,17 +54,13 @@ class ListAdapter extends BaseAdapter {
     {
         SpannableStringBuilder textSpan = new SpannableStringBuilder("");
         String[] clickable = line.split(" ");
-        for (String aClickable : clickable) {
+        for (final String aClickable : clickable) {
             textSpan.append(aClickable);
-            textSpan.setSpan(new ClickableSpan() {
-                @Override
-                public void onClick(View widget) {
-                    Log.d("myTag", "This is my message");
-                }
-            }, textSpan.length() - aClickable.length(), textSpan.length(), 0);
+            textSpan.setSpan(new SpecialClickableSpan(aClickable,myContext), textSpan.length() - aClickable.length(), textSpan.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
             textSpan.append(" ");
         }
         view.setMovementMethod(LinkMovementMethod.getInstance());
         view.setText(textSpan, TextView.BufferType.SPANNABLE);
     }
 }
+
