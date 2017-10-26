@@ -70,6 +70,16 @@ public class MainScreen extends AppCompatActivity {
             }
         });
 
+        Button calculatorBtn = (Button)findViewById(R.id.calculatorBtn);
+        calculatorBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), CalculatorScreen.class);
+                startActivity(startIntent);
+            }
+        });
+
         //When finds equations when search bar is done
         EditText searchBar = (EditText)findViewById(R.id.searchBar);
         searchBar.setOnEditorActionListener(new TextView.OnEditorActionListener(){

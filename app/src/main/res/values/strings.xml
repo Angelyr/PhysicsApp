@@ -13,6 +13,7 @@
     <string name="EnterExpression">Enter Expression</string>
     <string name="Convert">Convert</string>
     <string name="result">Result</string>
+    <string name="calculator">Calculator</string>
 
     <string-array name="equations">
         <item>v̅ = Δs / Δt</item>
