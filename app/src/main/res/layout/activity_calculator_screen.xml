@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+    tools:context="thelawsofphysics.physicsapp.List">
     <EditText
         android:id="@+id/CaculatorTitle"
         android:layout_width="200sp"
@@ -28,15 +28,15 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Enter First Number"
-        android:inputType="number"
+        android:inputType="number|numberDecimal"
         android:textAlignment="center"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/CaculatorTitle"
-        app:layout_constraintHorizontal_bias="0.503" />
+        app:layout_constraintTop_toBottomOf="@+id/CaculatorTitle" />
 
     <EditText
         android:id="@+id/SecondNumEditText"
@@ -47,7 +47,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Enter Second Number"
-        android:inputType="number"
+        android:inputType="number|numberDecimal"
         android:textAlignment="center"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

@@ -22,50 +22,50 @@ public class CalculatorScreen extends AppCompatActivity {
                 EditText firstNumEditText= (EditText) findViewById(R.id.FirstNumEditText);
                 EditText secondNumEditText= (EditText) findViewById(R.id.SecondNumEditText);
                 TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
-                int num1 = Integer.parseInt(firstNumEditText.getText().toString());
-                int num2 = Integer.parseInt(secondNumEditText.getText().toString());
-                int result= num1 + num2;
+                Double num1 = Double.parseDouble(firstNumEditText.getText().toString());
+                Double num2 = Double.parseDouble(secondNumEditText.getText().toString());
+                Double result= num1 + num2;
                 resultTextview.setText(result+"");
             }
         });
 
         Button minusbtn= (Button) findViewById(R.id.MinusBotton);
-        addbtn.setOnClickListener(new View.OnClickListener(){
+        minusbtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 EditText firstNumEditText= (EditText) findViewById(R.id.FirstNumEditText);
                 EditText secondNumEditText= (EditText) findViewById(R.id.SecondNumEditText);
                 TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
-                int num1 = Integer.parseInt(firstNumEditText.getText().toString());
-                int num2 = Integer.parseInt(secondNumEditText.getText().toString());
-                int result= num1 - num2;
+                Double num1 = Double.parseDouble(firstNumEditText.getText().toString());
+                Double num2 = Double.parseDouble(secondNumEditText.getText().toString());
+                Double result= num1 - num2;
                 resultTextview.setText(result+"");
             }
         });
 
         Button mulbtn= (Button) findViewById(R.id.MultiBotton);
-        addbtn.setOnClickListener(new View.OnClickListener(){
+        mulbtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 EditText firstNumEditText= (EditText) findViewById(R.id.FirstNumEditText);
                 EditText secondNumEditText= (EditText) findViewById(R.id.SecondNumEditText);
                 TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
-                int num1 = Integer.parseInt(firstNumEditText.getText().toString());
-                int num2 = Integer.parseInt(secondNumEditText.getText().toString());
-                int result= num1 * num2;
+                Double num1 = Double.parseDouble(firstNumEditText.getText().toString());
+                Double num2 = Double.parseDouble(secondNumEditText.getText().toString());
+                Double result= num1 * num2;
                 resultTextview.setText(result+"");
             }
         });
         Button divbtn= (Button) findViewById(R.id.DivideButton);
-        addbtn.setOnClickListener(new View.OnClickListener(){
+        divbtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 EditText firstNumEditText= (EditText) findViewById(R.id.FirstNumEditText);
                 EditText secondNumEditText= (EditText) findViewById(R.id.SecondNumEditText);
                 TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
-                int num1 = Integer.parseInt(firstNumEditText.getText().toString());
-                int num2 = Integer.parseInt(secondNumEditText.getText().toString());
-                int result= num1 / num2;
+                Double num1 = Double.parseDouble(firstNumEditText.getText().toString());
+                Double num2 = Double.parseDouble(secondNumEditText.getText().toString());
+                Double result= num1 / num2;
                 resultTextview.setText(result+"");
             }
         });
