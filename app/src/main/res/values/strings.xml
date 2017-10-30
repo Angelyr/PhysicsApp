@@ -13,6 +13,206 @@
     <string name="EnterExpression">Enter Expression</string>
     <string name="Convert">Convert</string>
     <string name="result">Result</string>
+    <string name="calculator">Calculator</string>
+
+    <string-array name="equations">
+        <item>v̅ = Δs / Δt</item>
+        <item>v = ds / dt</item>
+        <item>a̅ = Δv / Δt</item>
+        <item>a = dv / dt</item>
+        <item>v = v0 + at</item>
+        <item>x = x0 + v0 * t + ½ * a * t^2</item>
+        <item>v^2 = v0^2 + 2 * a * (x - x0)</item>
+        <item>v̅ = ½ * (v + v0)</item>
+        <item>F = ma</item>
+        <item>F = dp / dt</item>
+        <item>W = mg</item>
+        <item>f ≤ μ * N</item>
+        <item>ac = v^2 / r</item>
+        <item>ac = -w^2 * r</item>
+        <item>p = m * v</item>
+        <item>J = F̅ * Δt</item>
+        <item>J = ∫ F * dt</item>
+        <item>F̅ * Δt = m * Δv</item>
+        <item>∫	F * dt = Δp</item>
+        <item>W = F̅ * Δs * cos θ</item>
+        <item>W = ∫ F · ds</item>
+        <item>F̅ * Δs * cos θ = ΔE</item>
+        <item>∫ F · ds = ΔE</item>
+        <item>K = ½ * m * v^2</item>
+        <item>ΔU = − ∫ F · ds</item>
+        <item>F = - ∇U</item>
+        <item>ΔUg = m * g * Δh</item>
+        <item>η = Wout / Ein</item>
+        <item>P̅ = ΔW / Δt</item>
+        <item>P = dW / dt</item>
+        <item>P̅ = F̅ * v * cos θ</item>
+        <item>P = F · v</item>
+        <item>ω̅ = Δθ / Δt</item>
+        <item>ω = dθ / dt</item>
+        <item>v = ω × r</item>
+        <item>α̅ = Δω / Δt</item>
+        <item>α = dω / dt</item>
+        <item>a = α × r − ω^2 * r</item>
+        <item>ω = ω0 + α * t</item>
+        <item>θ = θ0 + ω0 * t + ½ * α * t^2</item>
+        <item>ω^2 = ω0^2 + 2 * α * (θ − θ0)</item>
+        <item>ω̅ = ½ * (ω + ω0)</item>
+        <item>τ = I * α</item>
+        <item>τ = dL * dt</item>
+        <item>τ = r * F * sinθ</item>
+        <item>τ = r × F</item>
+        <item>I = ∑ m * r^2</item>
+        <item>I = ∫ r2 * dm</item>
+        <item>W = τ̅ * Δθ</item>
+        <item>W = ∫ τ · dθ</item>
+        <item>P = τ * ω * cos θ</item>
+        <item>P = τ · ω</item>
+        <item>K = ½ * I * ω^2</item>
+        <item>L = m * r * v * sin θ</item>
+        <item>L = r × p</item>
+        <item>L = I * ω</item>
+        <item>Fg = − (G * m1 * m2 * r̂) / r2</item>
+        <item>g = − (G * m * r̂) r^2</item>
+        <item>Ug = − (G * m1 * m2) / r</item>
+        <item>Vg = − (G * m) / r</item>
+        <item>v = √ G * m / r</item>
+        <item>v = √ 2G * m / r</item>
+        <item>F = − k * Δx</item>
+        <item>Us = ½ * k * Δx^2</item>
+        <item>T = 2 * π * √ m / k</item>
+        <item>T = 2 * π * √ ℓ / g</item>
+        <item>ƒ = 1 / T</item>
+        <item>ω = 2 * π * ƒ</item>
+        <item>ρ = m * V</item>
+        <item>P = F / A</item>
+        <item>P = P0 + ρ * g * h</item>
+        <item>B = ρ * g * Vdisplaced</item>
+        <item>qm = m / t</item>
+        <item>qV = V / t</item>
+        <item>ρ1 * A1 * v1 = ρ2 * A2 * v2</item>
+        <item>A1 * v1 = A2 * v2</item>
+        <item>P1 + ρ * g * y1 + ½ * ρ * v1^2 =	 P2 + ρ * g * y2 + ½ * ρ * v2^2</item>
+        <item>F̅ / A = η * (Δvx / Δz)</item>
+        <item>F / A = η * dvx / dz</item>
+        <item>v = η / ρ</item>
+        <item>R = ½ * ρ * C * A * v^2</item>
+        <item>Ma = v / c</item>
+        <item>Re = ρ * v * D / η</item>
+        <item>Fr = v / √gℓ</item>
+        <item>F / A = E * Δℓ / ℓ0</item>
+        <item>F / A = G * Δx / y</item>
+        <item>F / A = K * ΔV / V0</item>
+        <item>Δℓ = α * ℓ0 * ΔT</item>
+        <item>ΔA = 2α * A0 * ΔT</item>
+        <item>ΔV = 3α * V0 * ΔT</item>
+        <item>ΔV = β * V0 * ΔT</item>
+        <item>Q = m * c * ΔT</item>
+        <item>Q = m * L</item>
+        <item>P * V = n * R * T</item>
+        <item>n * R = N * k</item>
+        <item>⟨K⟩ = 3/2 * k * T</item>
+        <item>vp = √ 2 * k * T / m</item>
+        <item>⟨v⟩ = √ 8 * k * T / (π * m)</item>
+        <item>vrms =  √	3 * k * T / m</item>
+        <item>Φ̅ = ΔQ / Δt</item>
+        <item>Φ = dQ / dt</item>
+        <item>Φ = k * A * ΔT / ℓ</item>
+        <item>Φ = ε * σ * A * (T^4 − T0^4)</item>
+        <item>λmax = b / T</item>
+        <item>ΔU = 3⁄2 * n * R * ΔT</item>
+        <item>W = - ∫ P * dV</item>
+        <item>ΔU = Q + W</item>
+        <item>ΔS = ΔQ / T</item>
+        <item>S = k * log w</item>
+        <item>ℰreal = 1 − QC / QH</item>
+        <item>ℰideal = 1 − TC / TH</item>
+        <item>COPreal = QC / (QH − QC)</item>
+        <item>COPideal = TC / (TH − TC)</item>
+        <item>v = f * λ</item>
+        <item>v = ƒλ</item>
+        <item>f = 1 / T</item>
+        <item>fbeat = fhigh − flow</item>
+        <item>I = ⟨P⟩ / A</item>
+        <item>LI = 10 * log (I / I0)</item>
+        <item>LP = 20 * log (∆P	/ ∆P0)</item>
+        <item>nλ = d sin θ</item>
+        <item>nλ / d ≈ x / L</item>
+        <item>n = c / v</item>
+        <item>n1 * sin θ1 = n2 * sin θ2</item>
+        <item>sin θc = n2 / n1</item>
+        <item>1 / f = 1 / do + 1 / di</item>
+        <item>M = hi / ho = di / do</item>
+        <item>f ≈ r / 2</item>
+        <item>F = k * q1 * q2 / r^2</item>
+        <item>F = 1 / (4 * π * ε0) * (q1 * q2 / r^2) * r̂</item>
+        <item>E = FE / q</item>
+        <item>ΔV = ΔUE / q</item>
+        <item>E̅ = − ∆V / d</item>
+        <item>E = − ∇V</item>
+        <item>E = k * ∑ (q / r^2) * r̂</item>
+        <item>E = k * ∫ (dq / r^2) * r̂</item>
+        <item>V = k * ∑ (q */r)</item>
+        <item>V = k * ∫ (dq / r)</item>
+        <item>C = Q / V</item>
+        <item>C = κ * ε * 0A / d</item>
+        <item>C = 2 * π * κ * ε * 0ℓ / ln (b / a)</item>
+        <item>C = 4 * π * κ * ε0 / (1 / a - 1 / b)</item>
+        <item>U = 1 / 2 * C * v^2 = 1 / 2 * Q^2 / C = 1 / 2 * Q * V</item>
+        <item>I̅ = Δq / Δt</item>
+        <item>I = dq / dt</item>
+        <item>V = I * R</item>
+        <item>E = ρ * J</item>
+        <item>J = σ / E</item>
+        <item>ρ = 1 / σ</item>
+        <item>R = ρ * ℓ / A</item>
+        <item>P = V * I = I^2 * R = V^2 / R</item>
+        <item>Rs = ∑ Ri</item>
+        <item>1 / Rp = ∑ (1 / Ri)</item>
+        <item>1 / Cs = ∑ (1 / Ci)</item>
+        <item>Cp = ∑ Ci</item>
+        <item>FB = q * v * B * sin θ</item>
+        <item>FB = q * v × B</item>
+        <item>FB = I * ℓ * B * sin θ</item>
+        <item>d * FB = I * d * ℓ × B</item>
+        <item>B = μ0 * I / (4 * π) * ∫ (ds × r̂ / r^2)</item>
+        <item>B = µ0 * n * I</item>
+        <item>B = μ0 * I / (2 * π * r)</item>
+        <item>FB / ℓ = μ0 / (2 * pi) * I1 * I2 / r</item>
+        <item>ΦE = E * A * cos θ</item>
+        <item>ΦE = int (E · dA)</item>
+        <item>ΦB = B * A * cos θ</item>
+        <item>ΦB = int (B · dA)</item>
+        <item>ℰ = B * ℓ * v</item>
+        <item>ℰ̅ = − ΔΦB / Δt</item>
+        <item>ℰ̅ = − dΦB / dt</item>
+        <item>∯E · dA = Q * ε0</item>
+        <item>∇ · E = ρ / ε0</item>
+        <item>∯B · dA = 0</item>
+        <item>∇ · B = 0</item>
+        <item>∮E · ds = − dΦB / dt</item>
+        <item>∇ × E = − ∂ * B / ∂ / t</item>
+        <item>∮B · ds = μ0 * ε0 * dΦE / dt + μ0I</item>
+        <item>∇ × B = μ0 * ε0 * ∂ * E / ∂ / t + μ0 * J</item>
+        <item>t\' = t / √ (1 − v^2 / c^2)</item>
+        <item>ℓ\' = ℓ * √ (1 − v^2 / c^2)</item>
+        <item>m\' = m √ (1 − v^2 / c^2)</item>
+        <item>u\' = u + v / (1 + u * v / c^2)</item>
+        <item>E = m * c^2 / √ (1 − v^2 / c^2)</item>
+        <item>p = m * v / √(1 − v^2 / c^2)</item>
+        <item>E^2 = p^2 * c^2 + m0^2 * c^4</item>
+        <item>E = m * c^2</item>
+        <item>λ / λ0 = f0 / f = sqrt((1 + v / c) / (1 - v / c))</item>
+        <item>E = h * f</item>
+        <item>Kmax = E - ϕ = h * (ƒ − ƒ0)</item>
+        <item>p = h / λ</item>
+        <item>i * h * ∂ / (∂ * t) * Ψ(r,t) = - h^2 / (2 * m) * ∇^2 * Ψ(r,t) + V(r) * Ψ(r,t)</item>
+        <item>E * ψ(r) = − h^2  / 2 * m * ∇^2 * ψ(r) + V(r) * ψ(r)</item>
+        <item>Δpx * Δx ≥ ℏ / 2</item>
+        <item>ΔE * Δt ≥ ℏ / 2</item>
+        <item>1 / λ = - R∞ * ((1 / n^2) - (1 / n0^2))</item>
+        <item>N = N0 * 2^(−t / τ)</item>
+    </string-array>
 
     <string-array name="mechanicsEquations">
         <item>v̅ = Δs / Δt</item>
@@ -226,151 +426,319 @@
         <item>N = N0 * 2^(−t / τ)</item>
 
     </string-array>
+
     <string-array name="variables">
-    <item>v̅</item>
-    <item>Average velocity</item>
-    <item>Δs</item>
-    <item>Change in speed</item>
-    <item>Δt</item>
-    <item>Change in time</item>
-    <item>v</item>
-    <item>Velocity</item>
-    <item>ds</item>
-    <item>First Derivative of Speed</item>
-    <item>dt</item>
-    <item>First Derivative of Time</item>
-    <item>a̅</item>
-    <item>Average Acceleration</item>
-    <item>Δv</item>
-    <item>Change in velocity</item>
-    <item>a</item>
-    <item>Acceleration</item>
-    <item>dv</item>
-    <item>First Derivative of Velocity</item>
-    <item>v0</item>
-    <item>Initial Velocity</item>
-    <item>t</item>
-    <item>Time</item>
-    <item>x</item>
-    <item>Horizontal Position</item>
-    <item>x0</item>
-    <item>Initial Horizontal Position</item>
-    <item>F</item>
-    <item>Force</item>
-    <item>m</item>
-    <item>Mass</item>
-    <item>dp</item>
-    <item>First Derivative of momentum</item>
-    <item>W</item>
-    <item>Weight</item>
-    <item>g</item>
-    <item>Gravity</item>
-    <item>f</item>
-    <item>Friction</item>
-    <item>μ</item>
-    <item>Frictional Coefficient</item>
-    <item>N</item>
-    <item>Normal Force</item>
-    <item>ac</item>
-    <item>Centripetal Acceleration</item>
-    <item>ω</item>
-    <item>Angular Speed</item>
-    <item>p</item>
-    <item>Momentum</item>
-    <item>J</item>
-    <item>Impulse</item>
-    <item>F̅</item>
-    <item>Average Force</item>
-    <item>Δp</item>
-    <item>Change in momentum</item>
-    <item>W</item>
-    <item>Work</item>
-    <item>Δs</item>
-    <item>Change in position/Displacement</item>
-    <item>s</item>
-    <item>Position</item>
-    <item>ds</item>
-    <item>First Derivative of Position</item>
-    <item>θ</item>
-    <item>Angle</item>
-    <item>ΔE</item>
-    <item>Change in energy</item>
-    <item>K</item>
-    <item>Kinetic Energy</item>
-    <item>U</item>
-    <item>Potential Energy</item>
-    <item>ΔU</item>
-    <item>Change in Potential Energy</item>
-    <item>ΔUg</item>
-    <item>Change in Gravitational Potential Energy</item>
-    <item>Δh</item>
-    <item>Change in height</item>
-    <item>η</item>
-    <item>Mechanical Efficiency</item>
-    <item>Wout</item>
-    <item>Work Output</item>
-    <item>Ein</item>
-    <item>Energy Input</item>
-    <item>P̅</item>
-    <item>Average Power</item>
-    <item>ΔW</item>
-    <item>Change in Work</item>
-    <item>dW</item>
-    <item>First Derivative of Work</item>
-    <item>ω̅</item>
-    <item>Average Angular Speed</item>
-    <item>Δθ</item>
-    <item>Change in angle</item>
-    <item>dθ</item>
-    <item>First Derivative of Angle</item>
-    <item>r</item>
-    <item>Radius</item>
-    <item>α</item>
-    <item>Angular Acceleration</item>
-    <item>α̅</item>
-    <item>Average Angular Acceleration</item>
-    <item>Δω</item>
-    <item>Change in Angular Velocity</item>
-    <item>dω</item>
-    <item>First Derivative of Angular Velocity</item>
-    <item>ω0</item>
-    <item>Initial Angular Velocity</item>
-    <item>τ</item>
-    <item>Torque</item>
-    <item>I</item>
-    <item>Moment of Inertia</item>
-    <item>L</item>
-    <item>Length</item>
-    <item>dL</item>
-    <item>First Derivative of Length</item>
-    <item>Fg</item>
-    <item>Gravitational Force</item>
-    <item>r̂</item>
-    <item>Unit Direction of radius</item>
-    <item>Us</item>
-    <item>Elastic Potential Energy</item>
-    <item>ƒ</item>
-    <item>Frequency</item>
-    <item>ρ</item>
-    <item>Density</item>
-    <item>V</item>
-    <item>Volume</item>
-    <item>Vdisplaced</item>
-    <item>Volume Displaced</item>
-    <item>qm</item>
-    <item>Dynamic Pressure of Mass</item>
-    <item>qV</item>
-    <item>Dynamic Pressure of Volume</item>
-    <item>η</item>
-    <item>Viscosity</item>
-    <item>ℓ</item>
-    <item>Length</item>
-    <item>ε</item>
-    <item>Tensile Strain</item>
-    <item>γ</item>
-    <item>Shear Strain</item>
+        <item>v̅</item>
+        <item>Δs</item>
+        <item>Δt</item>
+        <item>v</item>
+        <item>ds</item>
+        <item>dt</item>
+        <item>a̅</item>
+        <item>Δv</item>
+        <item>a</item>
+        <item>dv</item>
+        <item>v0</item>
+        <item>t</item>
+        <item>x</item>
+        <item>x0</item>
+        <item>F</item>
+        <item>m</item>
+        <item>dp</item>
+        <item>W</item>
+        <item>g</item>
+        <item>f</item>
+        <item>μ</item>
+        <item>N</item>
+        <item>ac</item>
+        <item>ω</item>
+        <item>p</item>
+        <item>J</item>
+        <item>F̅</item>
+        <item>Δp</item>
+        <item>W</item>
+        <item>Δs</item>
+        <item>s</item>
+        <item>ds</item>
+        <item>θ</item>
+        <item>ΔE</item>
+        <item>K</item>
+        <item>U</item>
+        <item>ΔU</item>
+        <item>ΔUg</item>
+        <item>Δh</item>
+        <item>η</item>
+        <item>Wout</item>
+        <item>Ein</item>
+        <item>P̅</item>
+        <item>ΔW</item>
+        <item>dW</item>
+        <item>ω̅</item>
+        <item>Δθ</item>
+        <item>dθ</item>
+        <item>r</item>
+        <item>α</item>
+        <item>α̅</item>
+        <item>Δω</item>
+        <item>dω</item>
+        <item>ω0</item>
+        <item>τ</item>
+        <item>I</item>
+        <item>L</item>
+        <item>dL</item>
+        <item>Fg</item>
+        <item>r̂</item>
+        <item>Us</item>
+        <item>ƒ</item>
+        <item>ρ</item>
+        <item>V</item>
+        <item>Vdisplaced</item>
+        <item>qm</item>
+        <item>qV</item>
+        <item>η</item>
+        <item>ℓ</item>
+        <item>ε</item>
+        <item>γ</item>
     </string-array>
 
+    <string-array name="variableNames">
+        <item>Average velocity</item>
+        <item>Change in speed</item>
+        <item>Change in time</item>
+        <item>Velocity</item>
+        <item>First Derivative of Speed</item>
+        <item>First Derivative of Time</item>
+        <item>Average Acceleration</item>
+        <item>Change in velocity</item>
+        <item>Acceleration</item>
+        <item>First Derivative of Velocity</item>
+        <item>Initial Velocity</item>
+        <item>Time</item>
+        <item>Horizontal Position</item>
+        <item>Initial Horizontal Position</item>
+        <item>Force</item>
+        <item>Mass</item>
+        <item>First Derivative of momentum</item>
+        <item>Weight</item>
+        <item>Gravity</item>
+        <item>Friction</item>
+        <item>Frictional Coefficient</item>
+        <item>Normal Force</item>
+        <item>Centripetal Acceleration</item>
+        <item>Angular Speed</item>
+        <item>Momentum</item>
+        <item>Impulse</item>
+        <item>Average Force</item>
+        <item>Change in momentum</item>
+        <item>Work</item>
+        <item>Change in position/Displacement</item>
+        <item>Position</item>
+        <item>First Derivative of Position</item>
+        <item>Angle</item>
+        <item>Change in energy</item>
+        <item>Kinetic Energy</item>
+        <item>Potential Energy</item>
+        <item>Change in Potential Energy</item>
+        <item>Change in Gravitational Potential Energy</item>
+        <item>Change in height</item>
+        <item>Mechanical Efficiency</item>
+        <item>Work Output</item>
+        <item>Energy Input</item>
+        <item>Average Power</item>
+        <item>Change in Work</item>
+        <item>First Derivative of Work</item>
+        <item>Average Angular Speed</item>
+        <item>Change in angle</item>
+        <item>First Derivative of Angle</item>
+        <item>Radius</item>
+        <item>Angular Acceleration</item>
+        <item>Average Angular Acceleration</item>
+        <item>Change in Angular Velocity</item>
+        <item>First Derivative of Angular Velocity</item>
+        <item>Initial Angular Velocity</item>
+        <item>Torque</item>
+        <item>Moment of Inertia</item>
+        <item>Length</item>
+        <item>First Derivative of Length</item>
+        <item>Gravitational Force</item>
+        <item>Unit Direction of radius</item>
+        <item>Elastic Potential Energy</item>
+        <item>Frequency</item>
+        <item>Density</item>
+        <item>Volume</item>
+        <item>Volume Displaced</item>
+        <item>Dynamic Pressure of Mass</item>
+        <item>Dynamic Pressure of Volume</item>
+        <item>Viscosity</item>
+        <item>Length</item>
+        <item>Tensile Strain</item>
+        <item>Shear Strain</item>
+    </string-array>
+
+    <string-array name="constants">
+        <item>i</item>
+        <item>π</item>
+        <item>e</item>
+        <item>\gamma </item>
+        <item>Φ</item>
+        <item>M_1</item>
+        <item>\beta </item>
+        <item>l_P</item>
+        <item>m_P</item>
+        <item>t_P</item>
+        <item>q_P</item>
+        <item>T_P</item>
+        <item>c</item>
+        <item>G</item>
+        <item>h</item>
+        <item>μ_0</item>
+        <item>ε_0</item>
+        <item>Z_0</item>
+        <item>k_e</item>
+        <item>e</item>
+        <item>μ_B</item>
+        <item>G_0</item>
+        <item>G_0^(-1)</item>
+        <item>K_J</item>
+        <item>Φ_0</item>
+        <item>μ_N</item>
+        <item>R_K</item>
+        <item>a_0</item>
+        <item>r_e</item>
+        <item>m_e</item>
+        <item>G_F</item>
+        <item>E_h</item>
+        <item>m_p</item>
+        <item>h/2m_e</item>
+        <item>m_u</item>
+        <item>N_A</item>
+        <item>k_B</item>
+        <item>F</item>
+        <item>c_1</item>
+        <item>c_(1L)</item>
+        <item>n_0</item>
+        <item>R</item>
+        <item>N_Ah</item>
+        <item>V_m</item>
+        <item>σ</item>
+        <item>b_(energy)</item>
+        <item>b_(entropy)</item>
+        <item>K_(J-90)</item>
+        <item>R_(K-90)</item>
+        <item>M_u</item>
+        <item>g_n</item>
+        <item>atm</item>
+    </string-array>
+
+    <string-array name="constantNames">
+        <item>Imaginary unit</item>
+        <item>Pi</item>
+        <item>Euler\'s number</item>
+        <item>Euler–Mascheroni constant</item>
+        <item>Golden ratio</item>
+        <item>Meissel–Mertens constant</item>
+        <item>Bernstein\'s constant</item>
+        <item>Planck length</item>
+        <item>Planck mass</item>
+        <item>Planck time</item>
+        <item>Planck charge</item>
+        <item>Planck temperature</item>
+        <item>speed of light in vacuum</item>
+        <item>Newtonian constant of gravitation</item>
+        <item>Planck constant</item>
+        <item>magnetic constant (vacuum permeability)</item>
+        <item>electric constant (vacuum permittivity)</item>
+        <item>characteristic impedance of vacuum</item>
+        <item>Coulomb\'s constant</item>
+        <item>elementary charge</item>
+        <item>Bohr magneton</item>
+        <item>conductance quantum</item>
+        <item>inverse conductance quantum</item>
+        <item>Josephson constant</item>
+        <item>magnetic flux quantum</item>
+        <item>nuclear magneton</item>
+        <item>von Klitzing constant</item>
+        <item>Bohr radius</item>
+        <item>classical electron radius</item>
+        <item>electron mass</item>
+        <item>Fermi coupling constant</item>
+        <item>Hartree energy</item>
+        <item>proton mass</item>
+        <item>quantum of circulation</item>
+        <item>Atomic mass constant</item>
+        <item>Avogadro constant</item>
+        <item>Boltzmann constant</item>
+        <item>Faraday constant</item>
+        <item>first radiation constant</item>
+        <item>first radiation constant</item>
+        <item>Loschmidt constant</item>
+        <item>gas constant</item>
+        <item>molar Planck constant</item>
+        <item>molar volume of an ideal gas</item>
+        <item>Stefan–Boltzmann constant</item>
+        <item>Wien displacement law constant</item>
+        <item>Wien-Bonal entropy displacement law constant</item>
+        <item>conventional value of Josephson constant</item>
+        <item>conventional value of von Klitzing constant</item>
+        <item>molar mass</item>
+        <item>standard acceleration of gravity</item>
+        <item>standard atmosphere</item>
+    </string-array>
+
+    <string-array name="constantValues">
+        <item>(-1)^(1/2)</item>
+        <item>3.14159265358979323846264338327950288</item>
+        <item>2.71828182845904523536028747135266249</item>
+        <item>0.57721566490153286060651209008240243</item>
+        <item>1.61803398874989484820458683436563811</item>
+        <item>0.26149721284764278375542683860869585</item>
+        <item>0.28016949902386913303</item>
+        <item>1.616229*10^(−35) m</item>
+        <item>2.176470*10^(−8) kg</item>
+        <item>5.39116*10^(−44) s</item>
+        <item>1.875545956*10^(−18) C</item>
+        <item>1.416808*10^32 K</item>
+        <item>299792458 m*s^(-1)</item>
+        <item>6.674*10^(−8) cm^3*g^(−1)*s^(−2)</item>
+        <item>6.626070040*10^(−34) J*s</item>
+        <item>1.256637061*10^(−6)*N*A^(−2)</item>
+        <item>8.854187817*10^(−12)*F*m^(−1)</item>
+        <item>376.730313461Ω</item>
+        <item>8.9875517873681764*10^9 kg*m^3*s^(−4)*A^(−2)</item>
+        <item>1.6021766208*10^(−19) C</item>
+        <item>9.274009994*10^(−24) J*T^(−1)</item>
+        <item>7.7480917310*10^(−5) S</item>
+        <item>12906.4037278 Ω</item>
+        <item>4.835978525*10^14 Hz*V^(−1)</item>
+        <item>2.067833831*10^(−15) Wb</item>
+        <item>5.050783699*10^(−27) J*T^(−1)</item>
+        <item>25812.8074555 Ω</item>
+        <item>5.2917721067*10^(−11) m</item>
+        <item>2.8179403227(19)*10^(−15) m</item>
+        <item>9.10938356*10^(−31) kg</item>
+        <item>1.1663787*10^(−5) GeV^(−2)</item>
+        <item>4.359744650*10^(−18) J</item>
+        <item>1.672621898*10^(−27) kg</item>
+        <item>3.6369475486*10^(−4) m^2*s^(−1)</item>
+        <item>1.660539040*10^(−27) kg</item>
+        <item>6.022140857*10^23 mol^(−1)</item>
+        <item>1.38064852*10^(−23) J*K^(−1)</item>
+        <item>96485.33289 C*mol^(−1)</item>
+        <item>3.741771790*10^(−16) W*m^2</item>
+        <item>1.191042953*10^(−16) W*m^2*s*r^(−1)</item>
+        <item>2.6867811*10^25 m^(−3)</item>
+        <item>8.3144598 J*mol^(−1)*K^(−1)</item>
+        <item>3.9903127110*10^(−10) J*s*mol^(−1)</item>
+        <item>2.2413962*10^(−2) m^3*mol^(−1)</item>
+        <item>5.670367*10^(−8) W*m^(−2)*K^(−4)</item>
+        <item>2.8977729*10^(−3) m*K</item>
+        <item>3.0029152*10^(−3) m*K</item>
+        <item>4.835979*10^14 Hz*V^(−1)</item>
+        <item>25812.807 Ω</item>
+        <item>1*10^(−3) kg*mol^(−1)</item>
+        <item>9.80665 m*s^(−2)</item>
+        <item>101325 Pa</item>
+    </string-array>
 
     <string-array name="CommonConstants">
         <item>i</item>
