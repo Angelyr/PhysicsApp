@@ -105,5 +105,22 @@ public class MainScreen extends AppCompatActivity {
                 return false;
             }
         });
+
+        if(getIntent().hasExtra("search")) {
+            String input = getIntent().getExtras().getString("search");
+            searchBar.setText(input);
+            java.util.List<String> searchResults = new ArrayList<>();
+            String[] equations = res.getStringArray(R.array.equations);
+            for (String equation : equations) {
+                if (equation.contains(input)) {
+                    searchResults.add(equation);
+                }
+            }
+            String[] result = new String[searchResults.size()];
+            result = searchResults.toArray(result);
+            Intent startIntent = new Intent(getApplicationContext(), List.class);
+            startIntent.putExtra("display", result);
+            startActivity(startIntent);
+        }
     }
 }

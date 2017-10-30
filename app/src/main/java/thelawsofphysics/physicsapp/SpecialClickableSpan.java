@@ -25,6 +25,12 @@ class SpecialClickableSpan extends ClickableSpan {
             startIntent.putExtra("substitute", equation.getText().toString());
             myContext.startActivity(startIntent);
         }
+        else
+        {
+            Intent startIntent = new Intent(myContext, MainScreen.class);
+            startIntent.putExtra("search", text);
+            myContext.startActivity(startIntent);
+        }
     }
     @Override
     public void updateDrawState(TextPaint ds) {
