@@ -561,5 +561,291 @@
         <item>49.70969538</item>
     </string-array>
 
+    <string-array name="areaUnits">
+        <item>square kilometer</item>
+        <item>1</item>
+        <item>hectare</item>
+        <item>100</item>
+        <item>are</item>
+        <item>10000</item>
+        <item>square meter</item>
+        <item>1000000</item>
+        <item>square centimeter</item>
+        <item>10000000000</item>
+        <item>square mile</item>
+        <item>0.3861021585</item>
+        <item>acre</item>
+        <item>247.1053815</item>
+        <item>square yard</item>
+        <item>1195990.046</item>
+        <item>square feet</item>
+        <item>10763910.42</item>
+        <item>square inch</item>
+        <item>1550003100</item>
+    </string-array>
+
+    <string-array name="powerUnits">
+        <item>kilowatt</item>
+        <item>1</item>
+        <item>btu/h</item>
+        <item>3.412.141632</item>
+        <item>horse power</item>
+        <item>1.35962115</item>
+        <item>watt</item>
+        <item>1000</item>
+    </string-array>
+
+    <string-array name="pressureUnits">
+        <item>kilo pascal</item>
+        <item>1</item>
+        <item>atmosphere</item>
+        <item>0.009869232667</item>
+        <item>bar</item>
+        <item>0.01</item>
+        <item>millibar</item>
+        <item>10</item>
+        <item>inch mercury</item>
+        <item>0.2952998751</item>
+        <item>millimeter mercury</item>
+        <item>7.500616827</item>
+        <item>mega pascal</item>
+        <item>0.001</item>
+        <item>pascal</item>
+        <item>1000</item>
+        <item>pound/sq foot</item>
+        <item>20.88543423</item>
+        <item>pound/sq inch</item>
+        <item>0.1450377377</item>
+    </string-array>
+
+    <string-array name="speedUnits">
+        <item>meter per second</item>
+        <item>1</item>
+        <item>kilometer per hour</item>
+        <item>3.6</item>
+        <item>mile per hour</item>
+        <item>2.236936292</item>
+        <item>feet per minute</item>
+        <item>196.8503937</item>
+        <item>feet per second</item>
+        <item>3.280839895</item>
+        <item>knot</item>
+        <item>1.943844492</item>
+        <item>speed of light</item>
+        <item>0.000000003335640952</item>
+        <item>speed of sound</item>
+        <item>0.002913752914</item>
+    </string-array>
+
+    <string-array name="temperatureUnits">
+        <item>kelvin</item>
+        <item>-273</item>
+        <item>celsius</item>
+        <item>0</item>
+        <item>Fahrenheit</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="volumeUnits">
+        <item>cubic meter</item>
+        <item>1</item>
+        <item>liter</item>
+        <item>1000</item>
+        <item>deciliter</item>
+        <item>10000</item>
+        <item>centiliter</item>
+        <item>100000</item>
+        <item>cubic yard</item>
+        <item>1.307950619</item>
+        <item>cubic foot</item>
+        <item>35.31466672</item>
+        <item>cubic inch</item>
+        <item>61023.74409</item>
+        <item>us barrel</item>
+        <item>6.28981077</item>
+        <item>us liquid gallon</item>
+        <item>264.1720524</item>
+        <item>us fluid ounce</item>
+        <item>33814.0227</item>
+        <item>us pint</item>
+        <item>2113.376419</item>
+        <item>us quart</item>
+        <item>1056.688209</item>
+    </string-array>
+
+    <string-array name="weightUnits">
+        <item>kilogram</item>
+        <item>1</item>
+        <item>gram</item>
+        <item>1000</item>
+        <item>milligram</item>
+        <item>1000000</item>
+        <item>pound</item>
+        <item>2.204622622</item>
+        <item>ounce</item>
+        <item>35.27396195</item>
+        <item>ton metric</item>
+        <item>0.001</item>
+        <item>ton short</item>
+        <item>0.001102311311</item>
+        <item>stone</item>
+        <item>0.1574730444</item>
+    </string-array>
+
+    <string-array name="alternativeUnits0">
+        <item>kilometer</item>
+        <item>meter</item>
+        <item>centimeter</item>
+        <item>millimeter</item>
+        <item>mile</item>
+        <item>yard</item>
+        <item>feet</item>
+        <item>inch</item>
+        <item>league</item>
+        <item>furlong</item>
+        <item>rod</item>
+        <item>chain</item>
+
+        <item>square kilometer</item>
+        <item>hectare</item>
+        <item>are</item>
+        <item>square meter</item>
+        <item>square centimeter</item>
+        <item>square mile</item>
+        <item>acre</item>
+        <item>square yard</item>
+        <item>square feet</item>
+        <item>square inch</item>
+
+        <item>kilowatt</item>
+        <item>btu/h</item>
+        <item>horse power</item>
+        <item>watt</item>
+
+        <item>kilo pascal</item>
+        <item>atmosphere</item>
+        <item>bar</item>
+        <item>millibar</item>
+        <item>inch mercury</item>
+        <item>millimeter mercury</item>
+        <item>mega pascal</item>
+        <item>pascal</item>
+        <item>pound/sq foot</item>
+        <item>pound/sq inch</item>
+
+        <item>meter per second</item>
+        <item>kilometer per hour</item>
+        <item>mile per hour</item>
+        <item>feet per minute</item>
+        <item>feet per second</item>
+        <item>knot</item>
+        <item>speed of light</item>
+        <item>speed of sound</item>
+
+        <item>kelvin</item>
+        <item>celsius</item>
+        <item>fahrenheit</item>
+
+        <item>cubic meter</item>
+        <item>liter</item>
+        <item>deciliter</item>
+        <item>centiliter</item>
+        <item>cubic yard</item>
+        <item>cubic foot</item>
+        <item>cubic inch</item>
+        <item>us barrel</item>
+        <item>us liquid gallon</item>
+        <item>us fluid ounce</item>
+        <item>us pint</item>
+        <item>us quart</item>
+
+        <item>kilogram</item>
+        <item>gram</item>
+        <item>milligram</item>
+        <item>pound</item>
+        <item>ounce</item>
+        <item>ton metric</item>
+        <item>ton short</item>
+        <item>stone</item>
+    </string-array>
+
+    <string-array name="alternativeUnits1">
+        <item>km</item>
+        <item>m</item>
+        <item>cm</item>
+        <item>mm</item>
+        <item>mi</item>
+        <item>yard</item>
+        <item>ft</item>
+        <item>in</item>
+        <item>league</item>
+        <item>fur</item>
+        <item>rod</item>
+        <item>chain</item>
+
+        <item>km^2</item>
+        <item>ha</item>
+        <item>a</item>
+        <item>m^2</item>
+        <item>cm^2</item>
+        <item>mile^2</item>
+        <item>acre</item>
+        <item>yd^2</item>
+        <item>ft^2</item>
+        <item>in^2</item>
+
+        <item>kw</item>
+        <item>btu/h</item>
+        <item>hp</item>
+        <item>w</item>
+
+        <item>kpa</item>
+        <item>atm</item>
+        <item>bar</item>
+        <item>mbar</item>
+        <item>in hg</item>
+        <item>mm hg</item>
+        <item>mpa</item>
+        <item>pa</item>
+        <item>psf</item>
+        <item>psi</item>
+
+        <item>m/s</item>
+        <item>km/h</item>
+        <item>mph</item>
+        <item>ft/min</item>
+        <item>ft/s</item>
+        <item>knot</item>
+        <item>c</item>
+        <item>mach</item>
+
+        <item>k</item>
+        <item>°C</item>
+        <item>°F</item>
+
+        <item>m^3</item>
+        <item>l</item>
+        <item>dl</item>
+        <item>cl</item>
+        <item>yd^3</item>
+        <item>ft^3</item>
+        <item>in^3</item>
+        <item>barrel</item>
+        <item>gallon</item>
+        <item>fl oz</item>
+        <item>pint</item>
+        <item>quart</item>
+
+        <item>kg</item>
+        <item>gr</item>
+        <item>mg</item>
+        <item>lb</item>
+        <item>oz</item>
+        <item>ton</item>
+        <item>ton short</item>
+        <item>st</item>
+    </string-array>
+
+
 
 </resources>
