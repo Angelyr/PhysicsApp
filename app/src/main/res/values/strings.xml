@@ -14,6 +14,9 @@
     <string name="Convert">Convert</string>
     <string name="result">Result</string>
     <string name="calculator">Calculator</string>
+    <string name="solve">Solve</string>
+    <string name="convert_units">Convert Units</string>
+    <string name="units">Units</string>
 
     <string-array name="equations">
         <item>v̅ = Δs / Δt</item>
