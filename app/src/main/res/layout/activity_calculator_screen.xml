@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:layout_editor_absoluteY="81dp">
-    tools:context="thelawsofphysics.physicsapp.List">
+    tools:context="thelawsofphysics.physicsapp.CalculatorScreen">
 
     <EditText
         android:id="@+id/CaculatorTitle"
@@ -30,6 +30,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
         android:layout_marginTop="100dp"
         android:ems="10"
         android:hint="Enter 1st Number"
@@ -54,6 +56,7 @@
         android:textSize="15sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/FirstNumEditText"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/FirstNumEditText" />
 
     <Button
@@ -86,7 +89,7 @@
         android:id="@+id/MinusBotton"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:text=" - "
+        android:text="\u2212"
         android:textSize="20sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/LogButton"
         app:layout_constraintEnd_toEndOf="@+id/AddButton"
@@ -99,7 +102,7 @@
         android:layout_height="50dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text=" * "
+        android:text="\u00D7"
         android:textSize="20sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/LnButton"
         app:layout_constraintEnd_toEndOf="@+id/MinusBotton"
@@ -112,9 +115,9 @@
         android:layout_height="50dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text=" / "
+        android:text="\u00F7"
         android:textSize="20sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/SquarertButton"
         app:layout_constraintEnd_toEndOf="@+id/MultiBotton"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/MultiBotton" />
@@ -148,13 +151,13 @@
         app:layout_constraintStart_toStartOf="@+id/PowerButton" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/SquarertButton"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginBottom="12dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="but1"
+        android:text="\u221A"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/resultTextView"
         app:layout_constraintEnd_toEndOf="@+id/LnButton"
@@ -171,7 +174,7 @@
         android:layout_marginRight="8dp"
         android:text="ln"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/button1"
+        app:layout_constraintBottom_toTopOf="@+id/SquarertButton"
         app:layout_constraintEnd_toEndOf="@+id/LogButton"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/LogButton" />
@@ -201,7 +204,7 @@
         app:layout_constraintStart_toStartOf="@+id/SinButton" />
 
     <Button
-        android:id="@+id/TanBotton"
+        android:id="@+id/TanButton"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginEnd="8dp"
@@ -214,15 +217,15 @@
         app:layout_constraintStart_toStartOf="@+id/CosButton" />
 
     <Button
-        android:id="@+id/ModuloBotton"
+        android:id="@+id/ModuloButton"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="%"
+        android:text="MOD"
         android:textSize="20sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button1"
-        app:layout_constraintEnd_toEndOf="@+id/TanBotton"
+        app:layout_constraintBaseline_toBaselineOf="@+id/SquarertButton"
+        app:layout_constraintEnd_toEndOf="@+id/TanButton"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/TanBotton" />
+        app:layout_constraintStart_toStartOf="@+id/TanButton" />
 </android.support.constraint.ConstraintLayout>

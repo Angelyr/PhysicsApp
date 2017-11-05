@@ -98,6 +98,36 @@ public class CalculatorScreen extends AppCompatActivity {
 
             }
         });
+        Button lnbtn= (Button) findViewById(R.id.LnButton);
+        lnbtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                EditText firstNumEditText= (EditText) findViewById(R.id.FirstNumEditText);
+                EditText secondNumEditText= (EditText) findViewById(R.id.SecondNumEditText);
+                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
+                Double num1 = Double.parseDouble(firstNumEditText.getText().toString());
+                Double num2 = Double.parseDouble(secondNumEditText.getText().toString());
+                Double result=Math.log(num1);
+                Double result2=Math.log(num2);
+                resultTextview.setText("1st:"+String.format("%.2f", result)+" 2nd:"+String.format("%.2f", result2));
+
+            }
+        });
+        Button sqrbtn= (Button) findViewById(R.id.SquarertButton);
+        sqrbtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                EditText firstNumEditText= (EditText) findViewById(R.id.FirstNumEditText);
+                EditText secondNumEditText= (EditText) findViewById(R.id.SecondNumEditText);
+                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
+                Double num1 = Double.parseDouble(firstNumEditText.getText().toString());
+                Double num2 = Double.parseDouble(secondNumEditText.getText().toString());
+                Double result=Math.sqrt(num1);
+                Double result2=Math.sqrt(num2);
+                resultTextview.setText("1st:"+String.format("%.2f", result)+" 2nd:"+String.format("%.2f", result2));
+
+            }
+        });
         Button sinbtn= (Button) findViewById(R.id.SinButton);
         sinbtn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -107,8 +137,9 @@ public class CalculatorScreen extends AppCompatActivity {
                 TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
                 Double num1 = Double.parseDouble(firstNumEditText.getText().toString());
                 Double num2 = Double.parseDouble(secondNumEditText.getText().toString());
-                Double result=Math.sin(num1);
-                resultTextview.setText(result+"");
+                Double result= Math.sin(num1);
+                Double result2=Math.sin(num2);
+                resultTextview.setText("1st:"+String.format("%.2f", result)+" 2nd:"+String.format("%.2f", result2));
 
             }
         });
@@ -122,7 +153,37 @@ public class CalculatorScreen extends AppCompatActivity {
                 Double num1 = Double.parseDouble(firstNumEditText.getText().toString());
                 Double num2 = Double.parseDouble(secondNumEditText.getText().toString());
                 Double result=Math.cos(num1);
-                resultTextview.setText(result+"");
+                Double result2=Math.cos(num2);
+                resultTextview.setText("1st:"+String.format("%.2f", result)+" 2nd:"+String.format("%.2f", result2));
+
+            }
+        });
+        Button tanbtn= (Button) findViewById(R.id.TanButton);
+        tanbtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                EditText firstNumEditText= (EditText) findViewById(R.id.FirstNumEditText);
+                EditText secondNumEditText= (EditText) findViewById(R.id.SecondNumEditText);
+                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
+                Double num1 = Double.parseDouble(firstNumEditText.getText().toString());
+                Double num2 = Double.parseDouble(secondNumEditText.getText().toString());
+                Double result=Math.tan(num1);
+                Double result2=Math.tan(num2);
+                resultTextview.setText("1st:"+String.format("%.2f", result)+" 2nd:"+String.format("%.2f", result2));
+
+            }
+        });
+        Button modbtn= (Button) findViewById(R.id.ModuloButton);
+        modbtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                EditText firstNumEditText= (EditText) findViewById(R.id.FirstNumEditText);
+                EditText secondNumEditText= (EditText) findViewById(R.id.SecondNumEditText);
+                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
+                Double num1 = Double.parseDouble(firstNumEditText.getText().toString());
+                Double num2 = Double.parseDouble(secondNumEditText.getText().toString());
+                Double result=num1%num2;
+                resultTextview.setText(""+result);
 
             }
         });
