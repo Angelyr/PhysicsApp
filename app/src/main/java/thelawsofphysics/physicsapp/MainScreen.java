@@ -4,14 +4,8 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-
-import java.util.ArrayList;
 //import java.util.List;
 
 public class MainScreen extends AppCompatActivity {
@@ -80,8 +74,16 @@ public class MainScreen extends AppCompatActivity {
             }
         });
 
+        Button searchBtn = (Button)findViewById(R.id.searchBtn);
+        searchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), SearchPage.class);
+                startActivity(startIntent);
+            }
+        });
         //When finds equations when search bar is done
-        EditText searchBar = (EditText)findViewById(R.id.searchBar);
+        /*EditText searchBar = (EditText)findViewById(R.id.searchBar);
         searchBar.setOnEditorActionListener(new TextView.OnEditorActionListener(){
 
             @Override
@@ -121,6 +123,6 @@ public class MainScreen extends AppCompatActivity {
             Intent startIntent = new Intent(getApplicationContext(), List.class);
             startIntent.putExtra("display", result);
             startActivity(startIntent);
-        }
+        }*/
     }
 }
