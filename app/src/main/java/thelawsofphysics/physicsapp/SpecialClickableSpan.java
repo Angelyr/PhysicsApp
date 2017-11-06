@@ -27,7 +27,7 @@ class SpecialClickableSpan extends ClickableSpan {
         }
         else
         {
-            Intent startIntent = new Intent(myContext, MainScreen.class);
+            Intent startIntent = new Intent(myContext, SearchPage.class);
             startIntent.putExtra("search", text);
             myContext.startActivity(startIntent);
         }

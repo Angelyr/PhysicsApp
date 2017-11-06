@@ -16,7 +16,6 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 
-
 public class SearchPage extends AppCompatActivity{
     private EditText filterText;
 
@@ -63,6 +62,15 @@ public class SearchPage extends AppCompatActivity{
             public void afterTextChanged(Editable s) {
             }
         });
+
+        if(getIntent().hasExtra("search")) {
+            Bundle extras = getIntent().getExtras();
+            if(extras != null)
+            {
+                String input = extras.getString("search");
+                filterText.setText(input);
+            }
+        }
     }
 
     @Override
@@ -75,9 +83,6 @@ public class SearchPage extends AppCompatActivity{
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
+        return id == R.id.action_settings || super.onOptionsItemSelected(item);
     }
 }

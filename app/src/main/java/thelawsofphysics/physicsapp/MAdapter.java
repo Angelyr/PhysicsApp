@@ -107,8 +107,8 @@ public class MAdapter<T> extends BaseAdapter implements Filterable, ThemedSpinne
      * @param textViewResourceId The id of the TextView within the layout resource to be populated
      * @param objects The objects to represent in the ListView.
      */
-    public MAdapter(Context context, int resource,
-                        int textViewResourceId, T[] objects, T[] helper) {
+    MAdapter(Context context, int resource,
+             int textViewResourceId, T[] objects, T[] helper) {
         this(context, resource, textViewResourceId, Arrays.asList(objects), Arrays.asList(helper));
     }
 
@@ -122,8 +122,8 @@ public class MAdapter<T> extends BaseAdapter implements Filterable, ThemedSpinne
      * @param textViewResourceId The id of the TextView within the layout resource to be populated
      * @param objects The objects to represent in the ListView.
      */
-    public MAdapter(Context context, int resource,
-                    int textViewResourceId, java.util.List<T> objects, java.util.List<T> helper) {
+    private MAdapter(Context context, int resource,
+                     int textViewResourceId, java.util.List<T> objects, java.util.List<T> helper) {
         mContext = context;
         mInflater = LayoutInflater.from(context);
         mResource = mDropDownResource = resource;
@@ -137,7 +137,7 @@ public class MAdapter<T> extends BaseAdapter implements Filterable, ThemedSpinne
      *
      * @param object The object to add at the end of the array.
      */
-    public void add(@Nullable T object) {
+    private void add(@Nullable T object) {
         synchronized (mLock) {
             if (mOriginalValues != null) {
                 mOriginalValues.add(object);
@@ -162,7 +162,7 @@ public class MAdapter<T> extends BaseAdapter implements Filterable, ThemedSpinne
      * @throws IllegalArgumentException if some property of an element of the
      *         specified collection prevents it from being added to this list
      */
-    public void addAll( Collection<? extends T> collection) {
+    private void addAll(Collection<? extends T> collection) {
         synchronized (mLock) {
             if (mOriginalValues != null) {
                 mOriginalValues.addAll(collection);
@@ -178,7 +178,8 @@ public class MAdapter<T> extends BaseAdapter implements Filterable, ThemedSpinne
      *
      * @param items The items to add at the end of the array.
      */
-    public void addAll(T ... items) {
+    @SafeVarargs
+    private final void addAll(T... items) {
         synchronized (mLock) {
             if (mOriginalValues != null) {
                 Collections.addAll(mOriginalValues, items);
@@ -195,7 +196,7 @@ public class MAdapter<T> extends BaseAdapter implements Filterable, ThemedSpinne
      * @param object The object to insert into the array.
      * @param index The index at which the object must be inserted.
      */
-    public void insert(@Nullable T object, int index) {
+    private void insert(@Nullable T object, int index) {
         synchronized (mLock) {
             if (mOriginalValues != null) {
                 mOriginalValues.add(index, object);
@@ -211,7 +212,7 @@ public class MAdapter<T> extends BaseAdapter implements Filterable, ThemedSpinne
      *
      * @param object The object to remove.
      */
-    public void remove(@Nullable T object) {
+    private void remove(@Nullable T object) {
         synchronized (mLock) {
             if (mOriginalValues != null) {
                 mOriginalValues.remove(object);
@@ -225,7 +226,7 @@ public class MAdapter<T> extends BaseAdapter implements Filterable, ThemedSpinne
     /**
      * Remove all elements from the list.
      */
-    public void clear() {
+    private void clear() {
         synchronized (mLock) {
             if (mOriginalValues != null) {
                 mOriginalValues.clear();
@@ -242,7 +243,7 @@ public class MAdapter<T> extends BaseAdapter implements Filterable, ThemedSpinne
      * @param comparator The comparator used to sort the objects contained
      *        in this adapter.
      */
-    public void sort(Comparator<? super T> comparator) {
+    private void sort(Comparator<? super T> comparator) {
         synchronized (mLock) {
             if (mOriginalValues != null) {
                 Collections.sort(mOriginalValues, comparator);
@@ -351,11 +352,15 @@ public class MAdapter<T> extends BaseAdapter implements Filterable, ThemedSpinne
         }
 
         final T item = getItem(position);
-        if (item instanceof CharSequence) {
-            text.setText((CharSequence) item);
-        } else {
-            text.setText(item.toString());
+        if(item != null)
+        {
+            clickableText(text, item.toString());
         }
+        /*if (item instanceof CharSequence) {
+            //text.setText((CharSequence) item);
+        } else {
+            //text.setText(item.toString());
+        }*/
 
         return view;
     }
@@ -487,10 +492,10 @@ public class MAdapter<T> extends BaseAdapter implements Filterable, ThemedSpinne
                     // First match against the whole, non-splitted value
                     if(prefixString.length() > 1){
                         String [] prefixArray = prefixString.split(",");
-                        for(int a = 0; a < prefixArray.length; a++){
+                        for (String aPrefixArray : prefixArray) {
 
-                            for(int b = 0; b < help.length; b++) {
-                                if (prefixArray[a].equals(help[b])) {
+                            for (String aHelp : help) {
+                                if (aPrefixArray.equals(aHelp)) {
                                     matching++;
                                     break;
                                 }
@@ -501,8 +506,8 @@ public class MAdapter<T> extends BaseAdapter implements Filterable, ThemedSpinne
                         }
                     }
                     else{
-                        for(int b = 0; b < help.length; b++){
-                            if(prefixString.equals(help[b])){
+                        for (String aHelp : help) {
+                            if (prefixString.equals(aHelp)) {
                                 newValues.add(value);
                                 break;
                             }
