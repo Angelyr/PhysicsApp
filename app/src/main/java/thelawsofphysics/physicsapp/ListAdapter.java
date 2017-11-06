@@ -38,6 +38,7 @@ class ListAdapter extends BaseAdapter {
         return position;
     }
 
+    //Receives equation to adapt and makes it a clickable text then returns it
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
@@ -50,6 +51,7 @@ class ListAdapter extends BaseAdapter {
         return v;
     }
 
+    //make line clickable and sets it in view
     private void clickableText(TextView view, String line)
     {
         SpannableStringBuilder textSpan = new SpannableStringBuilder("");

@@ -18,6 +18,7 @@ public class List extends AppCompatActivity {
         Resources res = getResources();
         listView = (ListView) findViewById(R.id.listView);
 
+        //receives string array to display and sends it to list adapter
         if(getIntent().hasExtra("display")) {
             displayList = getIntent().getExtras().getStringArray("display");
             ListAdapter listAdapter = new ListAdapter(this, displayList);

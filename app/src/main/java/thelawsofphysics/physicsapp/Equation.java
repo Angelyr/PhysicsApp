@@ -16,6 +16,7 @@ public class Equation extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_equation);
 
+        //Receives equation to set edit text
         Resources res = getResources();
         substituteEquation = (EditText) findViewById(R.id.substituteEquation);
         if(getIntent().hasExtra("substitute")) {
@@ -23,22 +24,26 @@ public class Equation extends AppCompatActivity {
             substituteEquation.setText(equation);
         }
 
+        //Sends equation to unit converter
         Button converterBtn = (Button)findViewById(R.id.convertBtn);
         converterBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 Intent startIntent = new Intent(getApplicationContext(), UnitConverter.class);
+                startIntent.putExtra("equation", substituteEquation.getText().toString());
                 startActivity(startIntent);
             }
         });
 
+        //Sends equation to calculator
         Button calculatorBtn = (Button)findViewById(R.id.solveBtn);
         calculatorBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 Intent startIntent = new Intent(getApplicationContext(), CalculatorScreen.class);
+                startIntent.putExtra("equation", substituteEquation.getText().toString());
                 startActivity(startIntent);
             }
         });

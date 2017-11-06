@@ -15,6 +15,13 @@ public class CalculatorScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator_screen);
+
+        TextView title = (TextView) findViewById(R.id.textView);
+        if(getIntent().hasExtra("equation")) {
+            String equation = getIntent().getExtras().getString("equation");
+            title.setText(equation);
+        }
+
         Button addbtn= (Button) findViewById(R.id.AddButton);
         addbtn.setOnClickListener(new View.OnClickListener(){
             @Override

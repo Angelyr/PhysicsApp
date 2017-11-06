@@ -23,13 +23,12 @@
                 android:layout_height="102dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginTop="-14dp"
+                android:layout_marginTop="8dp"
                 android:text="@string/variables"
+                app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/equationsBtn"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp" />
+                app:layout_constraintTop_toBottomOf="@+id/equationsBtn" />
 
             <Button
                 android:id="@+id/constantsBtn"
@@ -37,24 +36,22 @@
                 android:layout_height="102dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginTop="0dp"
+                android:layout_marginTop="8dp"
                 android:text="@string/constants"
+                app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/variablesBtn"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp" />
+                app:layout_constraintTop_toBottomOf="@+id/variablesBtn" />
 
             <Button
                 android:id="@+id/converterBtn"
                 android:layout_width="220dp"
                 android:layout_height="102dp"
-                android:layout_marginEnd="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="-8dp"
+                android:layout_marginTop="8dp"
                 android:text="@string/UnitConverter"
+                app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constantsBtn" />
@@ -67,6 +64,7 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/equations"
+                app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/searchBtn" />
@@ -86,10 +84,11 @@
             <Button
                 android:id="@+id/searchBtn"
                 android:layout_width="220dp"
-                android:layout_height="104dp"
+                android:layout_height="102dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:elevation="0dp"
                 android:text="@string/search"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

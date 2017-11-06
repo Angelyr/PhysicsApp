@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.Arrays;
 
@@ -33,6 +34,13 @@ public class UnitConverter extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.unit_converter);
+
+        TextView title = (TextView) findViewById(R.id.UnitConverter);
+        if(getIntent().hasExtra("equation")) {
+            String equation = getIntent().getExtras().getString("equation");
+            title.setText(equation);
+        }
+
         unit0 = (EditText)findViewById(R.id.editUnit0);
         unit1 = (EditText)findViewById(R.id.editUnit1);
         expression = (EditText)findViewById(R.id.editExpression);

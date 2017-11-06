@@ -5,25 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:layout_editor_absoluteY="81dp">
+    tools:layout_editor_absoluteY="81dp"><![CDATA[
     tools:context="thelawsofphysics.physicsapp.CalculatorScreen">
 
-    <EditText
-        android:id="@+id/CaculatorTitle"
-        android:layout_width="203dp"
-        android:layout_height="78dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="none"
-        android:text="Calculator"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    ]]>
 
     <EditText
         android:id="@+id/FirstNumEditText"
@@ -128,14 +113,10 @@
         android:layout_height="50dp"
         android:layout_marginBottom="20dp"
         android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:layout_marginTop="200dp"
         android:text="^"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/LogButton"
-        app:layout_constraintEnd_toStartOf="@+id/SinButton"
-        app:layout_constraintTop_toBottomOf="@+id/CaculatorTitle"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintEnd_toStartOf="@+id/SinButton" />
 
     <Button
         android:id="@+id/LogButton"
@@ -228,4 +209,18 @@
         app:layout_constraintEnd_toEndOf="@+id/TanButton"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/TanButton" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Calculator"
+        android:textColor="@android:color/black"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
