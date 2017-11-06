@@ -87,7 +87,7 @@
         <item>T = 2 * π * √ ℓ / g</item>
         <item>ƒ = 1 / T</item>
         <item>ω = 2 * π * ƒ</item>
-        <item>ρ = m * V</item>
+        <item>ρ = m / V</item>
         <item>P = F / A</item>
         <item>P = P0 + ρ * g * h</item>
         <item>B = ρ * g * Vdisplaced</item>
@@ -216,203 +216,204 @@
         <item>1 / λ = - R∞ * ((1 / n^2) - (1 / n0^2))</item>
         <item>N = N0 * 2^(−t / τ)</item>
     </string-array>
+
     <string-array name="equations_variables">
-        <item>v,s,t</item>
-        <item>v,s,t</item>
-        <item>a,s,v,t</item>
-        <item>a,v,t</item>
-        <item>v,a,t</item>
-        <item>x,v,t,a</item>
-        <item>v,a,x</item>
-        <item>v,</item>
-        <item>F,m,a</item>
-        <item>F,p,t</item>
-        <item>W,m,g</item>
-        <item>f,μ,N</item>
-        <item>a,v,r</item>
-        <item>a,w,r</item>
-        <item>p,m,v</item>
-        <item>J,F,t</item>
-        <item>J,F,t</item>
-        <item>F,t,m,v</item>
-        <item>F,t,p</item>
-        <item>W,F,s,θ</item>
-        <item>W,F,s</item>
-        <item>F,s,θ,E</item>
-        <item>F,s,E</item>
-        <item>K,m,v</item>
-        <item>U,F,s</item>
-        <item>F,U</item>
-        <item>U,m,g,h</item>
-        <item>η,W,E</item>
-        <item>P,W,t</item>
-        <item>P,W,t</item>
-        <item>P,F,v,θ</item>
-        <item>P,F,v</item>
-        <item>ω,θ,t</item>
-        <item>ω,θ,t</item>
-        <item>v,ω,r</item>
-        <item>α,ω,t</item>
-        <item>α,ω,t</item>
-        <item>a,α,r,ω</item>
-        <item>ω,α,t</item>
-        <item>θ,ω,t,α,t</item>
-        <item>ω,,α,θ,</item>
-        <item>ω</item>
-        <item>τ,I,α</item>
-        <item>τ,L,t</item>
-        <item>τ,r,F,θ</item>
-        <item>τ,r,F</item>
-        <item>I,m,r</item>
-        <item>I,r,m</item>
-        <item>W,τ,θ</item>
-        <item>W,τ,θ</item>
-        <item>P,τ,ω,θ</item>
-        <item>P,τ,ω</item>
-        <item>K,I,ω</item>
-        <item>L,m,r,v,θ</item>
-        <item>L,r,p</item>
-        <item>L,I,ω</item>
-        <item>F,G,m,r</item>
-        <item>g,G,m,r</item>
-        <item>U,G,m,r</item>
-        <item>V,G,m,r</item>
-        <item>v,G,m,r</item>
-        <item>v,G,m,r</item>
-        <item>F,k,x</item>
-        <item>U,k,x</item>
-        <item>T,m,k</item>
-        <item>T,ℓ,g</item>
-        <item>ƒ,T</item>
-        <item>ω,ƒ</item>
-        <item>ρ,m,V</item>
-        <item>P,F,A</item>
-        <item>P,ρ,g,h</item>
-        <item>B,ρ,g,V</item>
-        <item>q,m,t</item>
-        <item>qV,V,t</item>
-        <item>ρ,A,v</item>
-        <item>A,v</item>
-        <item>P,ρ,g,y,v</item>
-        <item>F,A,η,v,z</item>
-        <item>F,A,η,v,z</item>
-        <item>v,η,ρ</item>
-        <item>R,ρ,C,A,v</item>
-        <item>Ma,M,v,c</item>
-        <item>Re,ρ,v,D,η</item>
-        <item>Fr,v,g,ℓ</item>
-        <item>F,A,E,ℓ</item>
-        <item>F,A,G,Δx,x,y</item>
-        <item>F,A,K,ΔV,V0,V</item>
-        <item>ℓ,α,,ΔT,T</item>
-        <item>A,α,ΔT,T</item>
-        <item>ΔV,V,α,V0,ΔT,T</item>
-        <item>ΔV,V,β,V0,ΔT,T</item>
-        <item>Q,m,c,ΔT,T</item>
-        <item>Q,m,L</item>
-        <item>P,V,n,R,T</item>
-        <item>n,R,N,k</item>
-        <item>⟨K⟩,K,k,T</item>
-        <item>vp,v,k,T,m</item>
-        <item>⟨v⟩,v,k,T,m</item>
-        <item>vrms,v,k,T,m</item>
-        <item>Φ̅,ΔQ,Q,Δt,t</item>
-        <item>Φ,dQ,Q,dt,t</item>
-        <item>Φ,k,A,ΔT,T,ℓ</item>
-        <item>Φ,ε,σ,A,T,T0</item>
-        <item>λmax,b,T</item>
-        <item>ΔU,U,n,R,ΔT,T</item>
-        <item>W,P,dV,V</item>
-        <item>ΔU,U,Q,W</item>
-        <item>ΔS,S,ΔQ,Q,T</item>
-        <item>S,k,w</item>
-        <item>ℰreal,QC,QH</item>
-        <item>ℰideal,TC,TH</item>
-        <item>COPreal,QC,QH,QC</item>
-        <item>COPideal,TC,TH,TC</item>
-        <item>v,f,λ</item>
-        <item>v,ƒλ</item>
-        <item>f,T</item>
-        <item>fbeat,fhigh,flow</item>
-        <item>I,⟨P⟩,P,A</item>
-        <item>LI,I,I0</item>
-        <item>LP,∆P,P,∆P0)</item>
-        <item>nλ,d,θ</item>
-        <item>nλ,d,x,L</item>
-        <item>n,c,v</item>
-        <item>n,θ</item>
-        <item>θc,θ,n</item>
-        <item>f,do,di,d</item>
-        <item>M,hi,ho,h,d,di,do</item>
-        <item>f,r,</item>
-        <item>F,k,q,r</item>
-        <item>F,ε0,q,r,r̂</item>
-        <item>E,FE,q</item>
-        <item>ΔV,V,ΔUE,U,q</item>
-        <item>E̅,E,∆V,V,d</item>
-        <item>E,∇V,V</item>
-        <item>E,k,q,r,r̂</item>
-        <item>E,k,dq,q,r,r̂</item>
-        <item>V,k,q,r</item>
-        <item>V,k,dq,q,r</item>
-        <item>C,Q,V</item>
-        <item>C,κ,ε,0A,d</item>
-        <item>C,κ,ε,0ℓ,b,a</item>
-        <item>C,κ,ε0,a,b</item>
-        <item>U,C,v,Q,V</item>
-        <item>I̅,Δq,q,Δt,t</item>
-        <item>I,dq,q,dt,t</item>
-        <item>V,I,R</item>
-        <item>E,ρ,J</item>
-        <item>J,σ,E</item>
-        <item>ρ,σ</item>
-        <item>R,ρ,ℓ,A</item>
-        <item>P,V,I,R</item>
-        <item>Rs,Ri,R</item>
-        <item>Rp,Ri,R</item>
-        <item>Cs,Ci,C</item>
-        <item>Cp,Ci,C</item>
-        <item>FB,F,q,v,B,θ</item>
-        <item>FB,F,q,v,B</item>
-        <item>FB,I,ℓ,B,θ</item>
-        <item>d,FB,F,I,ℓ,B</item>
-        <item>B,μ0,I,ds,s,r̂,r</item>
-        <item>B,µ0,n,I</item>
-        <item>B,μ0,I,r</item>
-        <item>FB,ℓ,μ0,I,r</item>
-        <item>ΦE,E,A,θ</item>
-        <item>ΦE,E,dA,A</item>
-        <item>ΦB,B,A,θ</item>
-        <item>ΦB,B,dA,A</item>
-        <item>ℰ,B,ℓ,v</item>
-        <item>ℰ̅,ΔΦB,B,Δt,t</item>
-        <item>ℰ̅,dΦB,dt,t</item>
-        <item>∯E,dA,A,Q,ε0</item>
-        <item>E,ρ,ε0</item>
-        <item>∯B,dA,A</item>
-        <item>B</item>
-        <item>E,ds,s,dΦB,B,dt,t</item>
-        <item>E,∂,B,t</item>
-        <item>B,ds,μ0,ε0,dΦE,dt,t,μ0I,E,s</item>
-        <item>B,μ0,ε0,∂,E,t,J</item>
-        <item>t\',t,v,c</item>
-        <item>ℓ\',ℓ,v,c</item>
-        <item>m\',m,v,c</item>
-        <item>u\',u,v,c</item>
-        <item>E,m,c,v</item>
-        <item>p,m,v,c</item>
-        <item>E,p,c,m0,m</item>
-        <item>E,m,c</item>
-        <item>λ,λ0,f0,f,v,c</item>
-        <item>E,h,f</item>
-        <item>Kmax,E,ϕ,h,ƒ,ƒ0</item>
-        <item>p,h,λ</item>
-        <item>i,h,∂,t,Ψ(r,t),m,V(r)</item>
-        <item>E,ψ(r),h,m,V(r)</item>
-        <item>Δpx,Δx,ℏ</item>
-        <item>ΔE,Δt,t,ℏ</item>
-        <item>λ,R∞,n,n0</item>
-        <item>N,N0,t,τ</item>
+        <item>v̅,v,Velocity,Δs,s,Displacement,Δt,t,Time</item>
+        <item>v,Velocity,ds,s,Displacement,dt,</item>
+        <item>a̅,a,Acceleration,Δv,v,Velocity,Δt,t,Time</item>
+        <item>a,Acceleration,dv,v,Velocity,dt,t,Time</item>
+        <item>v,v0,Velocity,a,Acceleration,t,Time</item>
+        <item>x,x0,Position,v0,v,Velocity,t,Time,a,Acceleration</item>
+        <item>v,v0,Velocity,a,Acceleration,x,x0,Position</item>
+        <item>v̅,Velocity,v,v0</item>
+        <item>F,Force,m,Mass,a,Acceleration</item>
+        <item>F,Force,dp,p,Momentum,dt,t,Time</item>
+        <item>W,Weight,m,Mass,g,Gravity</item>
+        <item>f,Friction,μ,Frictional Coefficient,N</item>
+        <item>ac,a,Acceleration,v,Velocity,r,Radius</item>
+        <item>ac,a,Acceleration,w,Angular Velocity,r,Radius</item>
+        <item>p,Momentum,m,Mass,v,Velocity</item>
+        <item>J,Impulse,F̅,F,Force,Δt,t,Time</item>
+        <item>J,Impulse,F,Force,dt,t,Time</item>
+        <item>F̅,F,Force,Δt,t,Time,m,Mass,Δv,v,Velocity</item>
+        <item>F,Force,dt,t,Time,Δp,p,Momentum</item>
+        <item>W,Work,F̅,F,Force,Δs,s,Displacement,θ,Angle</item>
+        <item>W,Work,F,Force,ds,s,Displacement</item>
+        <item>F̅,F,Force,Δs,s,Displacement,θ,Angle,ΔE,E,Energy</item>
+        <item>F,Force,ds,s,Displacement,ΔE,E,Energy</item>
+        <item>K,K,Kinetic Energy,m,Mass,v,Velocity</item>
+        <item>ΔU,U,Potential Energy,F,Force,ds,s,Displacement</item>
+        <item>F,Force,∇U,U,Potential Energy</item>
+        <item>ΔUg,U,Potential Energy,m,Mass,g,Gravity,Δh,h,Height</item>
+        <item>η,Efficiency,Wout,W,Work,Ein,E,Energy</item>
+        <item>P̅,P,Power,ΔW,W,Work,Δt,t,Time</item>
+        <item>P,Power,dW,W,Work,dt,t,Time</item>
+        <item>P̅,P,Power,F̅,F,Force,v,Velocity,θ,Angle</item>
+        <item>P,Power,F,Force,v,Velocity</item>
+        <item>ω̅,ω,w,Angular Velocity,Δθ,θ,Angle,Δt,t,Time</item>
+        <item>ω,w,Angular Velocity,dθ,θ,Angle,dt,t,Time</item>
+        <item>v,Velocity,ω,w,Angular Velocity,r,Radius</item>
+        <item>α̅,α,a,Angular Acceleration,Δω,ω,w,Angular Velocity,Δt,t,Time</item>
+        <item>α,a,Angula Acceleration,dω,ω,w,Angular Velocity,dt,t,Time</item>
+        <item>a,α,Angular Acceleration,Acceleration,r,Radius,ω,w,Angular Velocity</item>
+        <item>ω,ω0,w,Angular Velocity,α,a,Angular Acceleration,t,Time</item>
+        <item>θ,θ0,Angle,ω0,ω,w,Angular Velocity,t,Time,α,a,Angular Acceleration,</item>
+        <item>ω,ω0,w,Angular Velocity,α,a,Angular Acceleration,θ,θ0,Angle</item>
+        <item>ω̅,ω,w,Angular Velocity,ω0</item>
+        <item>τ,Torque,I,Inertia,α,a,Angular Acceleration</item>
+        <item>τ,Torque,dL,L,Angular Momentum,dt,t,Time</item>
+        <item>τ,Torque,r,Radius,F,Force,θ,Angle</item>
+        <item>τ,Torque,r,Radius,F,Force</item>
+        <item>I,Inertia,m,Mass,r,Radius</item>
+        <item>I,Inertia,r,Radius,dm,m,Mass</item>
+        <item>W,Work,τ̅,τ,Torque,Δθ,θ,Angle</item>
+        <item>W,Work,τ,Torque,dθ,θ,Angle</item>
+        <item>P,Power,τ,Torque,ω,w,Angular Velocity,θ,Angle</item>
+        <item>P,Power,τ,Torque,ω,w,Angular Velocity</item>
+        <item>K,Kinetic Energy,I,Inertia,ω,w,Angular Velocity</item>
+        <item>L,Angular Momentum,m,Mass,r,Radius,v,Velocity,θ,Angle</item>
+        <item>L,Angular Momentum,r,Radius,p,Momentum</item>
+        <item>L,Angular Momentum,I,Inertia,ω,w,Angular Velocity</item>
+        <item>Fg,F,Force,G,Gravitational Constant,m,Mass,r̂,r,Radius</item>
+        <item>g,Gravity,G,Gravitational Constant,m,Mass,r̂,r,Radius</item>
+        <item>Ug,U,Potential Energy,G,Gravitational Constant,m,Mass,r,Radius</item>
+        <item>Vg,Gravitational Potential,G,Gravitational Constant,m,Mass,r,Radius</item>
+        <item>v,Orbital Speed,G,Gravitational Constant,m,Mass,r,Radius</item>
+        <item>v,Escape Velocity,G,Gravitational Constant,m,Mass,r,Radius</item>
+        <item>F,Force,k,Spring Constant,Δx,x,Displacement</item>
+        <item>Us,U,Potential Energy,k,Spring Constant,Δx,x,Displacement</item>
+        <item>T,Period,π,Pi,m,Mass,k,Spring Constant</item>
+        <item>T,Period,π,Pi,ℓ,Length,g,Gravity</item>
+        <item>ƒ,Frequency,T,Period</item>
+        <item>ω,w,Angular Velocity,π,Pi,ƒ,Frequency</item>
+        <item>ρ,Density,m,Mass,V,Volume</item>
+        <item>P,Pressure,F,Force,A,Area</item>
+        <item>P,P0,Pressure,ρ,Density,g,Gravity,h,Height</item>
+        <item>B,Buoyancy,ρ,Density,g,Gravity,Vdisplaced,V,Volume</item>
+        <item>qm,Mass Flow,m,Mass,t,Time</item>
+        <item>qV,Volume Flow,V,Volume,t,Time</item>
+        <item>ρ,Density,A,Area,v,Velocity</item>
+        <item>A,Area,v,Velocity</item>
+        <item>P,Pressue,ρ,Density,g,Gravity,y,Height,v,Velocity</item>
+        <item>F̅,F,Force,A,Area,η,Viscosity,Δv,v,Velocity,Δz,z,Distance</item>
+        <item>F,Force,A,Area,η,Viscosity,dv,v,Velocity,dz,z,Distance</item>
+        <item>v,Velocity,η,Viscosity,ρ,Density</item>
+        <item>R,Drag,ρ,Density,C,Drag Coefficient,A,Area,v,Velocity</item>
+        <item>Ma,Mach,v,Velocity,c,Sound</item>
+        <item>Re,Reynolds,ρ,Density,v,Velocity,D,Length,η,Viscosity</item>
+        <item>Fr,Froude,v,Velocity,g,Gravity,ℓ,Length</item>
+        <item>F,Force,A,Area,E,Energy,Δℓ,ℓ0,ℓ,Length</item>
+        <item>F,Force,A,Area,G,Shear Modulus,Δx,Displacement,y,Length</item>
+        <item>F,Force,A,Area,K,Bulk Modulus,ΔV,V0,V,Volume</item>
+        <item>Δℓ,α,Expansion,ℓ0,ℓ,Length,ΔT,T,Temperature</item>
+        <item>ΔA,A,Area,α,Expansion,A0,ΔT,T,Temperature</item>
+        <item>ΔV,V,Volume,α,Expansion,V0,ΔT,T,Temperature</item>
+        <item>ΔV,V,Volume,β,Expansion,V0,ΔT,T,Temperature</item>
+        <item>Q,Energy,m,Mass,c,Specific Heat,ΔT,T,Temperature</item>
+        <item>Q,Energy,m,Mass,L,Specific Latent Heat</item>
+        <item>P,Pressure,V,Volume,n,Moles,R,Gas Constant,T,Temperature</item>
+        <item>n * R = N * k</item>
+        <item>⟨K⟩,K,Molecular Kinetic Energy,k,Boltzmann Constant,T,Temperature</item>
+        <item>vp,Probable Velocity,k,Boltzmann Constant,T,Temperature,m,Mass</item>
+        <item>⟨v⟩,Molecular Velocity,k,Boltzmann Constant,T,Temperature,π,Pi,m,Mass</item>
+        <item>vrms,Velocity,k,Boltzmann Constant,T,Temperature,m,Mass</item>
+        <item>Φ̅,Φ,Heat Rate,ΔQ,Q,Heat Amount,Δt,t,Time,</item>
+        <item>Φ,Heat Flow Rate,dQ,Q,Heat Amount,dt,Time</item>
+        <item>Φ,Heat Flow Rate,k,Conductivity,A,Area,ΔT,T,Temperature,ℓ,Length</item>
+        <item>Φ,Heat Flow Rate,ε,Emissivity,σ,Stefan's Constant,A,Area,T,T0,Temperature</item>
+        <item>λmax,λ,Wavelength,b,Wein's Displacement Constant,T,Temperature</item>
+        <item>ΔU,U,Potential Energy,n,Moles,R,Heat Capacity,ΔT,T,Temperature</item>
+        <item>W,Work,P,Pressure,dV,V,Volume</item>
+        <item>ΔU,U,Potential Energy,Q,Energy Flow,W,Work</item>
+        <item>ΔS,S,Entropy,ΔQ,Q,Energy Flow,T,Temperature</item>
+        <item>S,Entropy,k,Boltzmann Constant,w, Microstates</item>
+        <item>ℰreal,Efficiency,QC,Low Temperature Output,QH,High Temperature Input</item>
+        <item>ℰideal,Efficiency,TH,High Temperature Operate,TH,Low Temperature Operate</item>
+        <item>COPreal = QC / (QH − QC)</item>
+        <item>COPideal = TC / (TH − TC)</item>
+        <item>v,Velocity,f,Frequency,λ,Wavelength</item>
+        <item>v,Velocity,ƒ,Frequency,λ,Wavelength</item>
+        <item>f,Frequency,T,Period</item>
+        <item>fbeat,Beat Frequency,fhigh,High Beat,flow,Low Beat</item>
+        <item>I,Intensity,⟨P⟩,Power,A,Area</item>
+        <item>LI,Intensity Level,I,I0,Intensity</item>
+        <item>LP,Pressure Level,∆P,∆P0,P,Pressure</item>
+        <item>n,Order Value,λ,Wavelength,d,Distance,θ,Angle</item>
+        <item>n,Order Value,λ,Wavelength,d,Distance,x,Position,L,Length</item>
+        <item>n,Order Value,c,Light,v,Velocity</item>
+        <item>n,Order Value,θ,Angle,</item>
+        <item>θc,θ,Angle,n,Order Value</item>
+        <item>f,Frequency,do,di,d,Distance</item>
+        <item>M,Magnification,hi,ho,h,Height,di,do,d,Distance</item>
+        <item>f,Focal Length,r,Radius</item>
+        <item>F,Force,k,Coulomb's Constant,q,Charge,r,Radius</item>
+        <item>F,Force,π,Pi,ε0,Permittivity,q,Charge,r,r̂,Radius</item>
+        <item>E,Field,FE,Force,q,Charge</item>
+        <item>ΔV,V,Voltage,ΔUE,U,Potential Energy,q,Charge</item>
+        <item>E̅,E,Field,∆V,V,Voltage,d,Distance</item>
+        <item>E,Field,∇V,V,Voltage</item>
+        <item>E,Field,k,Coulomb's Constant,q,Charge,r,r̂,Radiuse</item>
+        <item>E,Field,k,Coulomb's Constant,dq,q,Charge,r,r̂,Radius</item>
+        <item>V,Voltage,k,Coulomb's Constant,q,Charge,r,Radiuse</item>
+        <item>V,Voltage,k,Coulomb's Constant,dq,q,Charge,r,Radius</item>
+        <item>C,Capacitance,Q,Charge,V,Voltage</item>
+        <item>C,Capacitance,κ,Dielectric,ε0,Permittivity,A,Area,d,Distance</item>
+        <item>C,Capacitance,π,Pi,κ,Dielectric,ε0,Permittivity,ℓ,Length,b,a</item>
+        <item>C,Capacitance,π,Pi,κ,Dielectric,ε0,Permittivity,a,b</item>
+        <item>U,Potential Energy,C,Capacitance,V,Voltage,Q,Charge</item>
+        <item>I̅,I,Current,Δq,q,Charge,Δt,t,Time</item>
+        <item>I,Current,dq,q,Charge,dt,t,Time</item>
+        <item>V,Voltage,I,Current,R,Resistance</item>
+        <item>E,Field,ρ,Resistivity,J,Current Density</item>
+        <item>J,Current Density,σ,Conductivity,E,Field</item>
+        <item>ρ,Resistivity,σ,Conductivity</item>
+        <item>R,Resistance,ρ,Resistivity,ℓ,Length,A,Area</item>
+        <item>P,Power,V,Voltage,I,Current,R,Resistance</item>
+        <item>Rs,Ri,R,Resistance</item>
+        <item>Rp,Ri,R,Resistance</item>
+        <item>C,Cs,Ci,Capacitance</item>
+        <item>C,Cp,Ci,Capacitance</item>
+        <item>FB,F,Force,q,Charge,v,Velocity,B,Magnetic Field,θ,Angle</item>
+        <item>FB,F,Force,q,Charge,v,Velocity,B,Magentic Field</item>
+        <item>FB,F,Force,I,Current,ℓ,Length,B,Magnetic Field,θ,Angle</item>
+        <item>dFB,F,Force,I,Current,dℓ,ℓ,Length,B,Magnetic Field</item>
+        <item>B,Magnetic Field,μ0,Permeability,I,Current,π,Pi,ds,s,Displacement,r̂,r,Radius)</item>
+        <item>B,Magnetic Field,µ0,Permeability,n,Rounds,I,Current</item>
+        <item>B,Magnetic Field,μ0,Permeability,I,Current,π,Pi,r,Radius</item>
+        <item>FB,F,Force,ℓ,Length,μ0,Permeability,π,Pi,I,Current,r,Radius</item>
+        <item>ΦE = E * A * cos θ</item>
+        <item>ΦE = int (E · dA)</item>
+        <item>ΦB = B * A * cos θ</item>
+        <item>ΦB = int (B · dA)</item>
+        <item>ℰ = B * ℓ * v</item>
+        <item>ℰ̅ = − ΔΦB / Δt</item>
+        <item>ℰ̅ = − dΦB / dt</item>
+        <item>∯E · dA = Q * ε0</item>
+        <item>∇ · E = ρ / ε0</item>
+        <item>∯B · dA = 0</item>
+        <item>∇ · B = 0</item>
+        <item>∮E · ds = − dΦB / dt</item>
+        <item>∇ × E = − ∂ * B / ∂ / t</item>
+        <item>∮B · ds = μ0 * ε0 * dΦE / dt + μ0I</item>
+        <item>∇ × B = μ0 * ε0 * ∂ * E / ∂ / t + μ0 * J</item>
+        <item>t\' = t / √ (1 − v^2 / c^2)</item>
+        <item>ℓ\' = ℓ * √ (1 − v^2 / c^2)</item>
+        <item>m\' = m √ (1 − v^2 / c^2)</item>
+        <item>u\' = u + v / (1 + u * v / c^2)</item>
+        <item>E = m * c^2 / √ (1 − v^2 / c^2)</item>
+        <item>p = m * v / √(1 − v^2 / c^2)</item>
+        <item>E^2 = p^2 * c^2 + m0^2 * c^4</item>
+        <item>E = m * c^2</item>
+        <item>λ / λ0 = f0 / f = sqrt((1 + v / c) / (1 - v / c))</item>
+        <item>E = h * f</item>
+        <item>Kmax = E - ϕ = h * (ƒ − ƒ0)</item>
+        <item>p = h / λ</item>
+        <item>i * h * ∂ / (∂ * t) * Ψ(r,t) = - h^2 / (2 * m) * ∇^2 * Ψ(r,t) + V(r) * Ψ(r,t)</item>
+        <item>E * ψ(r) = − h^2  / 2 * m * ∇^2 * ψ(r) + V(r) * ψ(r)</item>
+        <item>Δpx * Δx ≥ ℏ / 2</item>
+        <item>ΔE * Δt ≥ ℏ / 2</item>
+        <item>1 / λ = - R∞ * ((1 / n^2) - (1 / n0^2))</item>
+        <item>N = N0 * 2^(−t / τ)</item>
     </string-array>
 
     <string-array name="mechanicsEquations">
@@ -704,10 +705,10 @@
 
     <string-array name="variableNames">
         <item>Average velocity</item>
-        <item>Change in speed</item>
+        <item>Change in displacement</item>
         <item>Change in time</item>
         <item>Velocity</item>
-        <item>First Derivative of Speed</item>
+        <item>First Derivative of displacement</item>
         <item>First Derivative of Time</item>
         <item>Average Acceleration</item>
         <item>Change in velocity</item>

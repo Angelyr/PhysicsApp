@@ -1,7 +1,9 @@
 package thelawsofphysics.physicsapp;
 
 import android.content.res.Resources;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -9,7 +11,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -19,8 +20,9 @@ import android.widget.Toast;
 public class SearchPage extends AppCompatActivity{
     private EditText filterText;
 
-    private ArrayAdapter<String> listAdapter;
+    private MAdapter<String> listAdapter;
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +36,7 @@ public class SearchPage extends AppCompatActivity{
         String [] listViewAdapterContent = res.getStringArray(R.array.equations);
         //Contains array of strings with variables
         String [] variablefilter = res.getStringArray(R.array.equations_variables);
-        listAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, listViewAdapterContent/*, variablefilter*/);
+        listAdapter = new MAdapter<>(this, android.R.layout.simple_list_item_1, android.R.id.text1, listViewAdapterContent, variablefilter);
 
         itemList.setAdapter(listAdapter);
 

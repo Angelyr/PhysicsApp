@@ -1,10 +1,15 @@
 package thelawsofphysics.physicsapp;
 
+
 import android.content.Context;
 import android.content.res.Resources;
-import android.support.annotation.IdRes;
-import android.support.annotation.NonNull;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
+import android.text.SpannableStringBuilder;
+import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
+import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,9 +17,15 @@ import android.widget.BaseAdapter;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
+import android.widget.ThemedSpinnerAdapter;
+
+import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
-
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 
 /**
  * A concrete BaseAdapter that is backed by an array of arbitrary
@@ -31,7 +42,8 @@ import java.util.ArrayList;
  * or to have some of data besides toString() results fill the views,
  * override {@link #getView(int, View, ViewGroup)} to return the type of view you want.
  */
-public class ModifiedAdapter<T> extends BaseAdapter implements Filterable/*, ThemedSpinnerAdapter */{
+@RequiresApi(api = Build.VERSION_CODES.M)
+public class MAdapter<T> extends BaseAdapter implements Filterable, ThemedSpinnerAdapter {
     /**
      * Lock used to modify the content of {@link #mObjects}. Any write operation
      * performed on the array should be synchronized on this lock. This lock is also
@@ -60,9 +72,8 @@ public class ModifiedAdapter<T> extends BaseAdapter implements Filterable/*, The
      * Contains the list of objects that represent the data of this ArrayAdapter.
      * The content of this list is referred to as "the array" in the documentation.
      */
-    private String[] mObjects;
-    private String [] mHelper;
-
+    private java.util.List<T> mObjects;
+    private java.util.List<T> mHelper;
 
     /**
      * If the inflated resource is not a TextView, {@code mFieldId} is used to find
@@ -80,28 +91,45 @@ public class ModifiedAdapter<T> extends BaseAdapter implements Filterable/*, The
     // A copy of the original mObjects array, initialized from and then used instead as soon as
     // the mFilter ArrayFilter is used. mObjects will then only contain the filtered values.
     private ArrayList<T> mOriginalValues;
-    private ModFilter mFilter;
+    private ArrayList<T> mHelperValues;
+    private ArrayFilter mFilter;
 
     /** Layout inflater used for {@link #getDropDownView(int, View, ViewGroup)}. */
     private LayoutInflater mDropDownInflater;
 
+
     /**
      * Constructor
+     *
      * @param context The current context.
      * @param resource The resource ID for a layout file containing a layout to use when
      *                 instantiating views.
      * @param textViewResourceId The id of the TextView within the layout resource to be populated
      * @param objects The objects to represent in the ListView.
-     * @param helper
      */
-    public ModifiedAdapter(@NonNull Context context, int resource,
-                           @IdRes int textViewResourceId, @NonNull String[] objects, String[] helper) {
+    public MAdapter(Context context, int resource,
+                        int textViewResourceId, T[] objects, T[] helper) {
+        this(context, resource, textViewResourceId, Arrays.asList(objects), Arrays.asList(helper));
+    }
+
+
+    /**
+     * Constructor
+     *
+     * @param context The current context.
+     * @param resource The resource ID for a layout file containing a layout to use when
+     *                 instantiating views.
+     * @param textViewResourceId The id of the TextView within the layout resource to be populated
+     * @param objects The objects to represent in the ListView.
+     */
+    public MAdapter(Context context, int resource,
+                    int textViewResourceId, java.util.List<T> objects, java.util.List<T> helper) {
         mContext = context;
         mInflater = LayoutInflater.from(context);
         mResource = mDropDownResource = resource;
         mObjects = objects;
-        mFieldId = textViewResourceId;
         mHelper = helper;
+        mFieldId = textViewResourceId;
     }
 
     /**
@@ -109,7 +137,6 @@ public class ModifiedAdapter<T> extends BaseAdapter implements Filterable/*, The
      *
      * @param object The object to add at the end of the array.
      */
-/*
     public void add(@Nullable T object) {
         synchronized (mLock) {
             if (mOriginalValues != null) {
@@ -135,7 +162,7 @@ public class ModifiedAdapter<T> extends BaseAdapter implements Filterable/*, The
      * @throws IllegalArgumentException if some property of an element of the
      *         specified collection prevents it from being added to this list
      */
-/*    public void addAll(@NonNull Collection<? extends T> collection) {
+    public void addAll( Collection<? extends T> collection) {
         synchronized (mLock) {
             if (mOriginalValues != null) {
                 mOriginalValues.addAll(collection);
@@ -151,7 +178,7 @@ public class ModifiedAdapter<T> extends BaseAdapter implements Filterable/*, The
      *
      * @param items The items to add at the end of the array.
      */
- /*   public void addAll(T ... items) {
+    public void addAll(T ... items) {
         synchronized (mLock) {
             if (mOriginalValues != null) {
                 Collections.addAll(mOriginalValues, items);
@@ -168,7 +195,7 @@ public class ModifiedAdapter<T> extends BaseAdapter implements Filterable/*, The
      * @param object The object to insert into the array.
      * @param index The index at which the object must be inserted.
      */
-/*    public void insert(T object, int index) {
+    public void insert(@Nullable T object, int index) {
         synchronized (mLock) {
             if (mOriginalValues != null) {
                 mOriginalValues.add(index, object);
@@ -184,7 +211,7 @@ public class ModifiedAdapter<T> extends BaseAdapter implements Filterable/*, The
      *
      * @param object The object to remove.
      */
-/*    public void remove( T object) {
+    public void remove(@Nullable T object) {
         synchronized (mLock) {
             if (mOriginalValues != null) {
                 mOriginalValues.remove(object);
@@ -198,7 +225,7 @@ public class ModifiedAdapter<T> extends BaseAdapter implements Filterable/*, The
     /**
      * Remove all elements from the list.
      */
- /*   public void clear() {
+    public void clear() {
         synchronized (mLock) {
             if (mOriginalValues != null) {
                 mOriginalValues.clear();
@@ -215,7 +242,7 @@ public class ModifiedAdapter<T> extends BaseAdapter implements Filterable/*, The
      * @param comparator The comparator used to sort the objects contained
      *        in this adapter.
      */
-/*    public void sort(@NonNull Comparator<? super T> comparator) {
+    public void sort(Comparator<? super T> comparator) {
         synchronized (mLock) {
             if (mOriginalValues != null) {
                 Collections.sort(mOriginalValues, comparator);
@@ -230,12 +257,12 @@ public class ModifiedAdapter<T> extends BaseAdapter implements Filterable/*, The
     public void notifyDataSetChanged() {
         super.notifyDataSetChanged();
         mNotifyOnChange = true;
-    }*/
+    }
 
     /**
-     * Control whether methods that change the list ({@link #//add}, {@link #//addAll(Collection)},
-     * {@link #//addAll(Object[])}, {@link #//insert}, {@link #//remove}, {@link #//clear},
-     * {@link #//sort(Comparator)}) automatically call {@link #notifyDataSetChanged}.  If set to
+     * Control whether methods that change the list ({@link #add}, {@link #addAll(Collection)},
+     * {@link #addAll(Object[])}, {@link #insert}, {@link #remove}, {@link #clear},
+     * {@link #sort(Comparator)}) automatically call {@link #notifyDataSetChanged}.  If set to
      * false, caller must manually call notifyDataSetChanged() to have the changes
      * reflected in the attached view.
      *
@@ -256,18 +283,18 @@ public class ModifiedAdapter<T> extends BaseAdapter implements Filterable/*, The
      *
      * @return The Context associated with this adapter.
      */
-    public @NonNull Context getContext() {
+    public Context getContext() {
         return mContext;
     }
 
     @Override
     public int getCount() {
-        return mObjects.length;
+        return mObjects.size();
     }
 
     @Override
-    public String getItem(int position) {
-        return mObjects[position];
+    public @Nullable T getItem(int position) {
+        return mObjects.get(position);
     }
 
     /**
@@ -277,13 +304,8 @@ public class ModifiedAdapter<T> extends BaseAdapter implements Filterable/*, The
      *
      * @return The position of the specified item.
      */
-    public int getPosition( String item) {
-        for(int i = 0; i < mObjects.length; i++){
-            if(mObjects[i].equals(item)){
-                return i;
-            }
-        }
-        return -1;
+    public int getPosition(@Nullable T item) {
+        return mObjects.indexOf(item);
     }
 
     @Override
@@ -292,13 +314,13 @@ public class ModifiedAdapter<T> extends BaseAdapter implements Filterable/*, The
     }
 
     @Override
-    public @NonNull View getView(int position, View convertView,
-                                 @NonNull ViewGroup parent) {
+    public View getView(int position, @Nullable View convertView,
+                        ViewGroup parent) {
         return createViewFromResource(mInflater, position, convertView, parent, mResource);
     }
 
-    private @NonNull View createViewFromResource(@NonNull LayoutInflater inflater, int position,
-                                                  View convertView, @NonNull ViewGroup parent, int resource) {
+    private View createViewFromResource(LayoutInflater inflater, int position,
+                                                 @Nullable View convertView,ViewGroup parent, int resource) {
         final View view;
         final TextView text;
 
@@ -328,7 +350,7 @@ public class ModifiedAdapter<T> extends BaseAdapter implements Filterable/*, The
                     "ArrayAdapter requires the resource ID to be a TextView", e);
         }
 
-        final T item = (T) getItem(position);
+        final T item = getItem(position);
         if (item instanceof CharSequence) {
             text.setText((CharSequence) item);
         } else {
@@ -355,10 +377,10 @@ public class ModifiedAdapter<T> extends BaseAdapter implements Filterable/*, The
      * By default, drop-down views are inflated against the theme of the
      * {@link Context} passed to the adapter's constructor.
      *
-     * //@param theme the theme against which to inflate drop-down views or
+     * @param theme the theme against which to inflate drop-down views or
      *              {@code null} to use the theme from the adapter's context
      * @see #getDropDownView(int, View, ViewGroup)
-     *//*
+     */
     @Override
     public void setDropDownViewTheme(@Nullable Resources.Theme theme) {
         if (theme == null) {
@@ -378,18 +400,48 @@ public class ModifiedAdapter<T> extends BaseAdapter implements Filterable/*, The
 
     @Override
     public View getDropDownView(int position, @Nullable View convertView,
-                                @NonNull ViewGroup parent) {
+                                ViewGroup parent) {
         final LayoutInflater inflater = mDropDownInflater == null ? mInflater : mDropDownInflater;
         return createViewFromResource(inflater, position, convertView, parent, mDropDownResource);
     }
-*/
+
+    /**
+     * Creates a new ArrayAdapter from external resources. The content of the array is
+     * obtained through {@link android.content.res.Resources#getTextArray(int)}.
+     *
+     * @param context The application's environment.
+     * @param textArrayResId The identifier of the array to use as the data source.
+     * @param textViewResId The identifier of the layout used to create views.
+     *
+     * @return An ArrayAdapter<CharSequence>.
+     */
+    public static
+    android.widget.ArrayAdapter<CharSequence> createFromResource(Context context,
+                                                                 int textArrayResId, int textViewResId) {
+        final CharSequence[] strings = context.getResources().getTextArray(textArrayResId);
+        return new android.widget.ArrayAdapter<>(context, textViewResId, strings);
+    }
+
     @Override
-    public @NonNull
+    public
     Filter getFilter() {
         if (mFilter == null) {
-            mFilter = new ModFilter();
+            mFilter = new ArrayFilter();
         }
         return mFilter;
+    }
+
+    private void clickableText(TextView view, String line)
+    {
+        SpannableStringBuilder textSpan = new SpannableStringBuilder("");
+        String[] clickable = line.split(" ");
+        for (final String aClickable : clickable) {
+            textSpan.append(aClickable);
+            textSpan.setSpan(new SpecialClickableSpan(aClickable,mContext), textSpan.length() - aClickable.length(), textSpan.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            textSpan.append(" ");
+        }
+        view.setMovementMethod(LinkMovementMethod.getInstance());
+        view.setText(textSpan, TextView.BufferType.SPANNABLE);
     }
 
     /**
@@ -397,14 +449,15 @@ public class ModifiedAdapter<T> extends BaseAdapter implements Filterable/*, The
      * a prefix. Each item that does not start with the supplied prefix
      * is removed from the list.</p>
      */
-    private class ModFilter extends Filter {
+    private class ArrayFilter extends Filter {
         @Override
         protected FilterResults performFiltering(CharSequence prefix) {
             final FilterResults results = new FilterResults();
 
             if (mOriginalValues == null) {
                 synchronized (mLock) {
-                    //mOriginalValues = new ArrayList<>(mObjects);
+                    mOriginalValues = new ArrayList<>(mObjects);
+                    mHelperValues = new ArrayList<>(mHelper);
                 }
             }
 
@@ -416,7 +469,7 @@ public class ModifiedAdapter<T> extends BaseAdapter implements Filterable/*, The
                 results.values = list;
                 results.count = list.size();
             } else {
-                final String prefixString = prefix.toString().toLowerCase();
+                final String prefixString = prefix.toString();
 
                 final ArrayList<T> values;
                 synchronized (mLock) {
@@ -427,11 +480,36 @@ public class ModifiedAdapter<T> extends BaseAdapter implements Filterable/*, The
                 final ArrayList<T> newValues = new ArrayList<>();
 
                 for (int i = 0; i < count; i++) {
+                    int matching = 0;
                     final T value = values.get(i);
-                    final String valueText = value.toString().toLowerCase();
-
+                    final String valueText = value.toString();
+                    final String [] help = mHelperValues.get(i).toString().split(",");
                     // First match against the whole, non-splitted value
-                    if (valueText.startsWith(prefixString)) {
+                    if(prefixString.length() > 1){
+                        String [] prefixArray = prefixString.split(",");
+                        for(int a = 0; a < prefixArray.length; a++){
+
+                            for(int b = 0; b < help.length; b++) {
+                                if (prefixArray[a].equals(help[b])) {
+                                    matching++;
+                                    break;
+                                }
+                            }
+                        }
+                        if(matching == prefixArray.length) {
+                            newValues.add(value);
+                        }
+                    }
+                    else{
+                        for(int b = 0; b < help.length; b++){
+                            if(prefixString.equals(help[b])){
+                                newValues.add(value);
+                                break;
+                            }
+                        }
+                    }
+
+                    /*if (valueText.startsWith(prefixString)) {
                         newValues.add(value);
                     } else {
                         final String[] words = valueText.split(" ");
@@ -441,7 +519,7 @@ public class ModifiedAdapter<T> extends BaseAdapter implements Filterable/*, The
                                 break;
                             }
                         }
-                    }
+                    }*/
                 }
 
                 results.values = newValues;
@@ -454,7 +532,7 @@ public class ModifiedAdapter<T> extends BaseAdapter implements Filterable/*, The
         @Override
         protected void publishResults(CharSequence constraint, FilterResults results) {
             //noinspection unchecked
-            mObjects = (String[]) results.values;
+            mObjects = (java.util.List<T>) results.values;
             if (results.count > 0) {
                 notifyDataSetChanged();
             } else {
@@ -463,3 +541,4 @@ public class ModifiedAdapter<T> extends BaseAdapter implements Filterable/*, The
         }
     }
 }
+
