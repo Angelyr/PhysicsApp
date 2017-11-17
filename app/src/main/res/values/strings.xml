@@ -17,6 +17,7 @@
     <string name="solve">Solve</string>
     <string name="convert_units">Convert Units</string>
     <string name="units">Units</string>
+    <string name="insert_problem">Insert Problem</string>
 
     <string-array name="equations">
         <item>v̅ = Δs / Δt</item>
@@ -1415,7 +1416,6 @@
         <item>ton short</item>
         <item>st</item>
     </string-array>
-
 
 
 </resources>

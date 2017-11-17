@@ -49,6 +49,11 @@ public class MainScreen extends AppCompatActivity {
             public void onClick(View v) {
                 Intent startIntent = new Intent(getApplicationContext(), List.class);
                 list = res.getStringArray(R.array.constants);
+                String[] values = res.getStringArray(R.array.constantValues);
+                for(int i = 0; i < list.length; i++)
+                {
+                    list[i] += " = " + values[i];
+                }
                 startIntent.putExtra("display", list);
                 startActivity(startIntent);
             }
@@ -79,6 +84,15 @@ public class MainScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent startIntent = new Intent(getApplicationContext(), SearchPage.class);
+                startActivity(startIntent);
+            }
+        });
+
+        Button problemBtn = (Button)findViewById(R.id.problemBtn);
+        problemBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), ProblemSearch.class);
                 startActivity(startIntent);
             }
         });
