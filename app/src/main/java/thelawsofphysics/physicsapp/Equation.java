@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 public class Equation extends AppCompatActivity {
 
     EditText substituteEquation;
@@ -44,6 +48,29 @@ public class Equation extends AppCompatActivity {
             public void onClick(View v) {
                 Intent startIntent = new Intent(getApplicationContext(), CalculatorScreen.class);
                 startIntent.putExtra("equation", substituteEquation.getText().toString());
+                startActivity(startIntent);
+            }
+        });
+
+        //adds equation to favorite equations
+        Button addFavoriteBtn = (Button)findViewById(R.id.addFavoriteBtn);
+        addFavoriteBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                String equationWrite = substituteEquation.getText().toString() + "\n";
+                String filename = "Favorites";
+                try{
+                    FileOutputStream outputStream = openFileOutput(filename, MODE_APPEND);
+                    outputStream.write(equationWrite.getBytes());
+                    outputStream.close();
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                Intent startIntent = new Intent(getApplicationContext(), Favorite.class);
                 startActivity(startIntent);
             }
         });

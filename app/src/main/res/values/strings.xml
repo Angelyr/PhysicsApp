@@ -18,6 +18,12 @@
     <string name="convert_units">Convert Units</string>
     <string name="units">Units</string>
     <string name="insert_problem">Insert Problem</string>
+    <string name="addToFavorite">Add To Favorite</string>
+    <string name="favoriteE">Favorite Equations</string>
+    <string name="favoriteC">Favorite Constants</string>
+    <string name="favoriteV">Favorite Variables</string>
+    <string name="favoriteR">Remove All Favourites</string>
+    <string name="favorite">Favourites</string>
 
     <string-array name="equations">
         <item>v̅ = Δs / Δt</item>
@@ -1415,6 +1421,11 @@
         <item>ton</item>
         <item>ton short</item>
         <item>st</item>
+    </string-array>
+
+    <string-array name="favoriteEquations">
+        <item>v̅ = Δs / Δt</item>
+        <item>v = ds / dt</item>
     </string-array>
 
 

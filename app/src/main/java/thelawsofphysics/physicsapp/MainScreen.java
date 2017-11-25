@@ -97,5 +97,13 @@ public class MainScreen extends AppCompatActivity {
             }
         });
 
+        Button favoriteBtn = (Button)findViewById(R.id.FavoriteBtn);
+        favoriteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), Favorite.class);
+                startActivity(startIntent);
+            }
+        });
     }
 }
