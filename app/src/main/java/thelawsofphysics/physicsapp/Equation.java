@@ -74,5 +74,17 @@ public class Equation extends AppCompatActivity {
                 startActivity(startIntent);
             }
         });
+
+        //Goes to list of similar equations
+        Button simBtn = (Button)findViewById(R.id.simBtn);
+        simBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), SimSearch.class);
+                startIntent.putExtra("equation", substituteEquation.getText().toString());
+                startActivity(startIntent);
+            }
+        });
     }
 }

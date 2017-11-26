@@ -24,6 +24,7 @@
     <string name="favoriteV">Favorite Variables</string>
     <string name="favoriteR">Remove All Favourites</string>
     <string name="favorite">Favourites</string>
+    <string name="simEqn">Similar Equations</string>
 
     <string-array name="equations">
         <item>v̅ = Δs / Δt</item>

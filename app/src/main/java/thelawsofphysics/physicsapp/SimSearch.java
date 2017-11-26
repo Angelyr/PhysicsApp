@@ -15,8 +15,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
-
-public class SearchPage extends AppCompatActivity{
+public class SimSearch extends AppCompatActivity {
     private EditText filterText;
 
     private MAdapter<String> listAdapter;
@@ -25,25 +24,29 @@ public class SearchPage extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search);
+        setContentView(R.layout.activity_similar);
+        /*EditText title = (EditText) findViewById(R.id.eqnText);
+        if(getIntent().hasExtra("equation")) {
+            String equation = getIntent().getExtras().getString("equation");
+            title.setText(equation);
+        }*/
+        filterText = (EditText)findViewById(R.id.eqnText);
 
-        filterText = (EditText)findViewById(R.id.searchPage);
-
-        ListView itemList = (ListView)findViewById(R.id.listSearch);
+        ListView itemList = (ListView)findViewById(R.id.simSearch);
         //Contains the array of equations
         Resources res = getResources();
         String [] listViewAdapterContent = res.getStringArray(R.array.equations);
         //Contains array of strings with variables
         String [] variablefilter = res.getStringArray(R.array.equations_variables);
-        listAdapter = new MAdapter<>(this, android.R.layout.simple_list_item_1, android.R.id.text1, listViewAdapterContent, variablefilter, "normal");
+        listAdapter = new MAdapter<>(this, android.R.layout.simple_list_item_1, android.R.id.text1, listViewAdapterContent, variablefilter, "similar");
 
         itemList.setAdapter(listAdapter);
-
+        //SimSearch.this.listAdapter.getFilter().filter(getIntent().getExtras().getString("equation"));
         itemList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            // make Toast when click
+                // make Toast when click
                 Toast.makeText(getApplicationContext(), "Position " + position, Toast.LENGTH_LONG).show();
             }
         });
@@ -55,7 +58,7 @@ public class SearchPage extends AppCompatActivity{
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                SearchPage.this.listAdapter.getFilter().filter(s);
+                SimSearch.this.listAdapter.getFilter().filter(s);
             }
 
             @Override
@@ -63,12 +66,14 @@ public class SearchPage extends AppCompatActivity{
             }
         });
 
-        if(getIntent().hasExtra("search")) {
+
+        if(getIntent().hasExtra("equation")) {
             Bundle extras = getIntent().getExtras();
             if(extras != null)
             {
-                String input = extras.getString("search");
+                String input = extras.getString("equation");
                 filterText.setText(input);
+                //SimSearch.this.listAdapter.getFilter().filter(input);
             }
         }
     }
@@ -86,3 +91,5 @@ public class SearchPage extends AppCompatActivity{
         return id == R.id.action_settings || super.onOptionsItemSelected(item);
     }
 }
+
+
