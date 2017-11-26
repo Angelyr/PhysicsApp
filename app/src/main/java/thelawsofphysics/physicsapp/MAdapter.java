@@ -93,6 +93,7 @@ public class MAdapter<T> extends BaseAdapter implements Filterable, ThemedSpinne
     private ArrayList<T> mOriginalValues;
     private ArrayList<T> mHelperValues;
     private ArrayFilter mFilter;
+    private String m_fil_type;
 
     /** Layout inflater used for {@link #getDropDownView(int, View, ViewGroup)}. */
     private LayoutInflater mDropDownInflater;
@@ -108,8 +109,8 @@ public class MAdapter<T> extends BaseAdapter implements Filterable, ThemedSpinne
      * @param objects The objects to represent in the ListView.
      */
     MAdapter(Context context, int resource,
-             int textViewResourceId, T[] objects, T[] helper) {
-        this(context, resource, textViewResourceId, Arrays.asList(objects), Arrays.asList(helper));
+             int textViewResourceId, T[] objects, T[] helper, String fil_type) {
+        this(context, resource, textViewResourceId, Arrays.asList(objects), Arrays.asList(helper), fil_type);
     }
 
 
@@ -123,13 +124,14 @@ public class MAdapter<T> extends BaseAdapter implements Filterable, ThemedSpinne
      * @param objects The objects to represent in the ListView.
      */
     private MAdapter(Context context, int resource,
-                     int textViewResourceId, java.util.List<T> objects, java.util.List<T> helper) {
+                     int textViewResourceId, java.util.List<T> objects, java.util.List<T> helper, String fil_type) {
         mContext = context;
         mInflater = LayoutInflater.from(context);
         mResource = mDropDownResource = resource;
         mObjects = objects;
         mHelper = helper;
         mFieldId = textViewResourceId;
+        m_fil_type = fil_type;
     }
 
     /**
@@ -483,52 +485,90 @@ public class MAdapter<T> extends BaseAdapter implements Filterable, ThemedSpinne
 
                 final int count = values.size();
                 final ArrayList<T> newValues = new ArrayList<>();
+                //For generating lists of similar equations
+                if(m_fil_type.equals("similar")){
+                    int var_index = 0;
+                    //Current issue is that this loop does not find the same equation in the xml file
+                    for(int ind = 0; ind < count; ind++){
+                        if(values.get(ind).toString().equals(prefixString)){
+                            var_index = ind;
+                            break;
+                        }
+                    }
+                    String [] simPrefix = mHelperValues.get(var_index).toString().split(",");
+                    int vars = simPrefix.length;
+                    int done = 0;       //Keeps track of the number of similar equations found
+                    int completed = 0;      //Keeps track of the number of expansions
 
-                for (int i = 0; i < count; i++) {
-                    int matching = 0;
-                    final T value = values.get(i);
-                    final String valueText = value.toString();
-                    final String [] help = mHelperValues.get(i).toString().split(",");
-                    // First match against the whole, non-splitted value
-                    if(prefixString.length() > 1){
-                        String [] prefixArray = prefixString.split(",");
-                        for (String aPrefixArray : prefixArray) {
+                    while(done < 5 && completed < 3) {
+                        for (int i = 0; i < count; i++) {
+                            int matching = 0;   //Keeps track of the number of matching variables
+                            final T value = values.get(i);  //Gets the value of that index
+                            final String valueText = value.toString();
+                            final String[] help = mHelperValues.get(i).toString().split(",");
+                            // First match against the whole, non-splitted value
+                            for (String aPrefixArray : simPrefix) {
+                                for (String aHelp : help) {
+                                    if (aPrefixArray.equals(aHelp)) {
+                                        matching++;
+                                        break;
+                                    }
+                                }
+                            }
+                            if (matching >= (vars - 2*completed)) {
+                                int same = 0;
+                                for(int newval = 0; newval < newValues.size(); newval++){
+                                    if(newValues.get(newval).toString().equals(valueText) || valueText.equals(prefixString) ){
+                                        same = 1;
+                                        break;
+                                    }
+                                }
+                                if(same == 0) {
+                                    newValues.add(value);
+                                    done++;
+                                }
+                            }
+                        }
+                        completed++;
+                    }
 
+                    results.values = newValues;
+                    results.count = newValues.size();
+
+                } else {    //For generating lists during basic search
+                    for (int i = 0; i < count; i++) {
+                        int matching = 0;   //Keeps track of the number of matching variables
+                        final T value = values.get(i);  //Gets the value of that index
+                        final String valueText = value.toString();
+                        final String[] help = mHelperValues.get(i).toString().split(",");
+                        // First match against the whole, non-splitted value
+                        if (prefixString.length() > 1) {
+                            String[] prefixArray = prefixString.split(",");
+                            for (String aPrefixArray : prefixArray) {
+
+                                for (String aHelp : help) {
+                                    if (aPrefixArray.equals(aHelp)) {
+                                        matching++;
+                                        break;
+                                    }
+                                }
+                            }
+                            if (matching == prefixArray.length) {
+                                newValues.add(value);
+                            }
+                        } else {
                             for (String aHelp : help) {
-                                if (aPrefixArray.equals(aHelp)) {
-                                    matching++;
+                                if (prefixString.equals(aHelp)) {
+                                    newValues.add(value);
                                     break;
                                 }
                             }
                         }
-                        if(matching == prefixArray.length) {
-                            newValues.add(value);
-                        }
-                    }
-                    else{
-                        for (String aHelp : help) {
-                            if (prefixString.equals(aHelp)) {
-                                newValues.add(value);
-                                break;
-                            }
-                        }
                     }
 
-                    /*if (valueText.startsWith(prefixString)) {
-                        newValues.add(value);
-                    } else {
-                        final String[] words = valueText.split(" ");
-                        for (String word : words) {
-                            if (word.startsWith(prefixString)) {
-                                newValues.add(value);
-                                break;
-                            }
-                        }
-                    }*/
+                    results.values = newValues;
+                    results.count = newValues.size();
                 }
-
-                results.values = newValues;
-                results.count = newValues.size();
             }
 
             return results;

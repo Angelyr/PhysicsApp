@@ -1,7 +1,7 @@
 package thelawsofphysics.physicsapp;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -12,7 +12,7 @@ import java.util.Arrays;
  * Created by yanlinzhu on 10/15/17.
  */
 
-public class UnitConverter extends Activity {
+public class UnitConverter extends AppCompatActivity {
 
     EditText unit0;
     EditText unit1;
