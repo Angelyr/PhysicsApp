@@ -8,9 +8,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 public class Equation extends AppCompatActivity {
 
@@ -26,6 +30,58 @@ public class Equation extends AppCompatActivity {
         if(getIntent().hasExtra("substitute")) {
             String equation = getIntent().getExtras().getString("substitute");
             substituteEquation.setText(equation);
+        }
+
+        //Stores equation in recently used equations file
+        FileOutputStream outputStream;
+        try {
+            outputStream = openFileOutput("Recent", MODE_APPEND);
+            String aEquation = substituteEquation.getText().toString() + "\n";
+            outputStream.write(aEquation.getBytes());
+            outputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        //Makes sure there are only 10 string in file
+        try {
+            ArrayList<String> equations = new ArrayList<>();
+            String aEquation;
+            FileInputStream inputStream = openFileInput("Recent");
+            InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+            while ((aEquation = bufferedReader.readLine())!=null)
+            {
+                equations.add(aEquation);
+            }
+
+            if(equations.size() > 10)
+            {
+                //delete file
+                try {
+                    outputStream = openFileOutput("Recent", MODE_PRIVATE);
+                    outputStream.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                //populate new file
+                try {
+                    outputStream = openFileOutput("Recent", MODE_APPEND);
+                    for(int i = equations.size()-10; i < equations.size(); i++)
+                    {
+                        aEquation = equations.get(i) + "\n";
+                        outputStream.write(aEquation.getBytes());
+                    }
+                    outputStream.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
         //Sends equation to unit converter
@@ -58,20 +114,45 @@ public class Equation extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-
+                EditText result = (EditText)findViewById(R.id.favoriteResult);
+                result.setText("");
                 String equationWrite = substituteEquation.getText().toString() + "\n";
-                String filename = "Favorites";
-                try{
-                    FileOutputStream outputStream = openFileOutput(filename, MODE_APPEND);
-                    outputStream.write(equationWrite.getBytes());
-                    outputStream.close();
+
+                ArrayList<String> flist = new ArrayList<>();
+                try {
+                    String message;
+                    FileInputStream inputStream = openFileInput("Favorites");
+                    InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+                    BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+                    while ((message=bufferedReader.readLine())!=null)
+                    {
+                        flist.add(message);
+                    }
+
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                Intent startIntent = new Intent(getApplicationContext(), Favorite.class);
-                startActivity(startIntent);
+
+                if (flist.contains(substituteEquation.getText().toString())) {
+                    result.setText("Equation Already Added");
+                }
+                else {
+                    String filename = "Favorites";
+                    try{
+                        FileOutputStream outputStream = openFileOutput(filename, MODE_APPEND);
+                        outputStream.write(equationWrite.getBytes());
+                        outputStream.close();
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    result.setText("Added To Favorite");
+                    Intent startIntent = new Intent(getApplicationContext(), Favorite.class);
+                    startActivity(startIntent);
+                }
             }
         });
 

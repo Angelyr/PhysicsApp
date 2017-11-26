@@ -14,12 +14,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-/**
- * Created by yanlinzhu on 11/24/17.
- */
-
 public class Favorite extends AppCompatActivity {
-    ArrayList<String> favlist = new ArrayList<String>();
+    ArrayList<String> favlist = new ArrayList<>();
     String[] list;
 
 
@@ -39,7 +35,6 @@ public class Favorite extends AppCompatActivity {
                     FileInputStream inputStream = openFileInput("Favorites");
                     InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
                     BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-                    StringBuffer stringBuffer = new StringBuffer();
                     while ((message=bufferedReader.readLine())!=null)
                     {
                         favlist.add(message);

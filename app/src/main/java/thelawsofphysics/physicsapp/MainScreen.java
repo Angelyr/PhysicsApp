@@ -6,6 +6,13 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 //import java.util.List;
 
 public class MainScreen extends AppCompatActivity {
@@ -102,6 +109,36 @@ public class MainScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent startIntent = new Intent(getApplicationContext(), Favorite.class);
+                startActivity(startIntent);
+            }
+        });
+
+        Button recentlyBtn = (Button)findViewById(R.id.recentlyBtn);
+        recentlyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), List.class);
+                //read from input file into list
+                try {
+                    ArrayList<String> equations = new ArrayList<>();
+                    String aEquation;
+                    FileInputStream inputStream = openFileInput("Recent");
+                    InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+                    BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+                    while ((aEquation = bufferedReader.readLine())!=null)
+                    {
+                        equations.add(0, aEquation);
+                    }
+                    list = equations.toArray(new String[equations.size()]);
+                    startIntent.putExtra("display", list);
+
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                //creates list
                 startActivity(startIntent);
             }
         });
