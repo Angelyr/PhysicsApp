@@ -4,19 +4,24 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.Button;
+import android.support.v7.widget.Toolbar;
+import android.view.*;
 //import java.util.List;
 
 public class MainScreen extends AppCompatActivity {
 
     String[] list;
-
+    String[] constantValues;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
         final Resources res = getResources();
+        constantValues=res.getStringArray(R.array.constantValuesMetric);
+        //Menud here**************
+        Toolbar mtoolbar= (Toolbar) findViewById(R.id.toolbarmenu);
+        setSupportActionBar(mtoolbar);
         //when equations button is clicked creates list of equations
         Button equationsBtn = (Button)findViewById(R.id.equationsBtn);
         equationsBtn.setOnClickListener(new View.OnClickListener() {
@@ -49,10 +54,9 @@ public class MainScreen extends AppCompatActivity {
             public void onClick(View v) {
                 Intent startIntent = new Intent(getApplicationContext(), List.class);
                 list = res.getStringArray(R.array.constants);
-                String[] values = res.getStringArray(R.array.constantValues);
                 for(int i = 0; i < list.length; i++)
                 {
-                    list[i] += " = " + values[i];
+                    list[i] += " = " + constantValues[i];
                 }
                 startIntent.putExtra("display", list);
                 startActivity(startIntent);
@@ -97,5 +101,22 @@ public class MainScreen extends AppCompatActivity {
             }
         });
 
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater mMenuInflater=getMenuInflater();
+        mMenuInflater.inflate(R.menu.menu_main, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        final Resources res = getResources();
+        if (item.getItemId()==R.id.imperial){
+            constantValues=res.getStringArray(R.array.constantValuesImperial);
+        }
+        if (item.getItemId()==R.id.metric){
+            constantValues=res.getStringArray(R.array.constantValuesMetric);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

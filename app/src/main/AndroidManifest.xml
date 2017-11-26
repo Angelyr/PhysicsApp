@@ -20,10 +20,11 @@
         <activity android:name=".List" />
         <activity android:name=".Equation" />
         <activity android:name=".CalculatorScreen" />
-        <activity android:name=".DerivativeCalculator"
-            android:exported="true"/>
+        <activity
+            android:name=".DerivativeCalculator"
+            android:exported="true" />
         <activity android:name=".SearchPage" />
-        <activity android:name=".ProblemSearch"></activity>
+        <activity android:name=".ProblemSearch" />
     </application>
 
 </manifest>
