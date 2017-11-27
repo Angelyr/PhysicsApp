@@ -32,6 +32,14 @@ public class Equation extends AppCompatActivity {
             substituteEquation.setText(equation);
         }
 
+        //Opens file to store recent equations
+        try
+        {
+            FileOutputStream file = openFileOutput("Recent", MODE_APPEND);
+            file.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         //Stores equation in recently used equations file if it is not already there
         try {
             //Reads in equations from file
