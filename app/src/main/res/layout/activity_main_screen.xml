@@ -119,6 +119,18 @@
                 app:layout_constraintTop_toBottomOf="@+id/FavoriteBtn" />
 
             <Button
+                android:id="@+id/derivativeBtn"
+                android:layout_width="220dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/derivative_calculator"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recentlyBtn" />
+
+            <Button
                 android:id="@+id/FavoriteBtn"
                 android:layout_width="220dp"
                 android:layout_height="60dp"

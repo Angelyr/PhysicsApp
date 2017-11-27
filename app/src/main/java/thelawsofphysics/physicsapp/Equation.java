@@ -43,8 +43,9 @@ public class Equation extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        //Makes sure there are only 10 string in file
+        //Makes sure there are only 10 strings in file
         try {
+            //Reads in strings from file
             ArrayList<String> equations = new ArrayList<>();
             String aEquation;
             FileInputStream inputStream = openFileInput("Recent");
@@ -54,10 +55,10 @@ public class Equation extends AppCompatActivity {
             {
                 equations.add(aEquation);
             }
-
+            //If there are more than 10 equations deletes the rest
             if(equations.size() > 10)
             {
-                //delete file
+                //deletes old file
                 try {
                     outputStream = openFileOutput("Recent", MODE_PRIVATE);
                     outputStream.close();

@@ -17,12 +17,14 @@ class ListAdapter extends BaseAdapter {
     private String[] list;
     private Context myContext;
 
+    //constructor
     ListAdapter(Context c, String[] l)
     {
         list = l;
         mInflator = (LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         myContext = c;
     }
+    //accessor methods
     @Override
     public int getCount() {
         return list.length;
