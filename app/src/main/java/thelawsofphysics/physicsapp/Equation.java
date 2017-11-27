@@ -118,6 +118,7 @@ public class Equation extends AppCompatActivity {
                 result.setText("");
                 String equationWrite = substituteEquation.getText().toString() + "\n";
 
+                // find if the equation is already added into the favorites
                 ArrayList<String> flist = new ArrayList<>();
                 try {
                     String message;
@@ -134,10 +135,10 @@ public class Equation extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
                 if (flist.contains(substituteEquation.getText().toString())) {
                     result.setText("Equation Already Added");
                 }
+                // add the equation to favorites
                 else {
                     String filename = "Favorites";
                     try{

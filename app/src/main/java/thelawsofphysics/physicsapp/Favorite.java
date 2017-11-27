@@ -29,6 +29,7 @@ public class Favorite extends AppCompatActivity {
         favoriteEBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // read the data and get a list of favorite equations
                 favlist.clear();
                 try {
                     String message;
@@ -46,7 +47,7 @@ public class Favorite extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-
+                // display the list of favorite equations with the help of List class
                 Intent startIntent = new Intent(getApplicationContext(), List.class);
                 list =  favlist.toArray(new String[favlist.size()]);
 
@@ -62,6 +63,7 @@ public class Favorite extends AppCompatActivity {
             public void onClick(View v) {
                 String equationWrite = "";
                 String fname = "Favorites";
+                // clear the list of favorite equations by overwrite the data file
                 try{
                     FileOutputStream outputStream = openFileOutput(fname,MODE_PRIVATE);
                     outputStream.write(equationWrite.getBytes());
