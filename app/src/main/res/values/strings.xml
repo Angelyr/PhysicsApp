@@ -39,9 +39,9 @@
         <item>x = x0 + v0 * t + ½ * a * t^2</item>
         <item>v^2 = v0^2 + 2 * a * (x - x0)</item>
         <item>v̅ = ½ * (v + v0)</item>
-        <item>F = ma</item>
+        <item>F = m * a</item>
         <item>F = dp / dt</item>
-        <item>W = mg</item>
+        <item>W = m * g</item>
         <item>f ≤ μ * N</item>
         <item>ac = v^2 / r</item>
         <item>ac = -w^2 * r</item>
