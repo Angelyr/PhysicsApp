@@ -130,6 +130,16 @@ public class MainScreen extends AppCompatActivity {
             }
         });
 
+        //Starts derivative calculator class when button is pressed
+        Button derivativeBtn = (Button)findViewById(R.id.derivativeBtn);
+        derivativeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), DerivativeCalculator.class);
+                startActivity(startIntent);
+            }
+        });
+
         //Creates list of recently used equations when button is clicked
         Button recentlyBtn = (Button)findViewById(R.id.recentlyBtn);
         recentlyBtn.setOnClickListener(new View.OnClickListener() {
