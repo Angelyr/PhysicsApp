@@ -6,13 +6,14 @@ import android.widget.*;
 /**
  * Created by h1aih on 2017/11/23.
  */
-
+//uses ratpoly to calculate derivative of the expression
 public class DerivativeCalculator extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_derivativecalculator);
         Button dxbtn= (Button) findViewById(R.id.Derivativebutton);
+        //on click event for derivative button
         dxbtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
