@@ -8,9 +8,6 @@ import android.widget.TextView;
 
 import java.util.Arrays;
 
-/**
- * Created by yanlinzhu on 10/15/17.
- */
 
 public class UnitConverter extends AppCompatActivity {
 

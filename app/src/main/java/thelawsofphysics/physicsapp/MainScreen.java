@@ -28,10 +28,13 @@ public class MainScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
         final Resources res = getResources();
+
+        //Initializes values for settings menu
         constantValues=res.getStringArray(R.array.constantValuesMetric);
-        //Menud here**************
         Toolbar mtoolbar= (Toolbar) findViewById(R.id.toolbarmenu);
         setSupportActionBar(mtoolbar);
+
+
         //when equations button is clicked creates list of equations
         Button equationsBtn = (Button)findViewById(R.id.equationsBtn);
         equationsBtn.setOnClickListener(new View.OnClickListener() {
@@ -44,6 +47,7 @@ public class MainScreen extends AppCompatActivity {
                 startActivity(startIntent);
             }
         });
+
         //when variables button is pressed creates list of variables
         Button variablesBtn = (Button)findViewById(R.id.variablesBtn);
         variablesBtn.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +60,7 @@ public class MainScreen extends AppCompatActivity {
                 startActivity(startIntent);
             }
         });
+
         //when constants button is pressed creates list of constants
         Button constantsBtn = (Button)findViewById(R.id.constantsBtn);
         constantsBtn.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +78,7 @@ public class MainScreen extends AppCompatActivity {
             }
         });
 
+        //Starts Unit Converter when button is clicked
         Button converterBtn = (Button)findViewById(R.id.converterBtn);
         converterBtn.setOnClickListener(new View.OnClickListener() {
 
@@ -83,6 +89,7 @@ public class MainScreen extends AppCompatActivity {
             }
         });
 
+        //Starts Calculator when button is clicked
         Button calculatorBtn = (Button)findViewById(R.id.calculatorBtn);
         calculatorBtn.setOnClickListener(new View.OnClickListener() {
 
@@ -93,6 +100,7 @@ public class MainScreen extends AppCompatActivity {
             }
         });
 
+        //Starts search bar when button is clicked
         Button searchBtn = (Button)findViewById(R.id.searchBtn);
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,6 +110,7 @@ public class MainScreen extends AppCompatActivity {
             }
         });
 
+        //Starts problem search when button is clicked
         Button problemBtn = (Button)findViewById(R.id.problemBtn);
         problemBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,6 +120,7 @@ public class MainScreen extends AppCompatActivity {
             }
         });
 
+        //Starts favorite equations class when button is clicked
         Button favoriteBtn = (Button)findViewById(R.id.FavoriteBtn);
         favoriteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,11 +130,13 @@ public class MainScreen extends AppCompatActivity {
             }
         });
 
+        //Creates list of recently used equations when button is clicked
         Button recentlyBtn = (Button)findViewById(R.id.recentlyBtn);
         recentlyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent startIntent = new Intent(getApplicationContext(), List.class);
+
                 //read from input file into list
                 try {
                     ArrayList<String> equations = new ArrayList<>();
@@ -151,12 +163,16 @@ public class MainScreen extends AppCompatActivity {
         });
 
     }
+
+    //Creates Options Menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater mMenuInflater=getMenuInflater();
         mMenuInflater.inflate(R.menu.menu_main, menu);
         return true;
     }
+
+    //Changes default units when button is clicked
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         final Resources res = getResources();

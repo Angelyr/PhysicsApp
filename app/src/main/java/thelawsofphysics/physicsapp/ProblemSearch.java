@@ -16,6 +16,7 @@ public class ProblemSearch extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_problem_search);
 
+        //Takes user input then finds all variables used and sends them to search bar
         EditText input = (EditText)findViewById(R.id.problemInput);
         input.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 

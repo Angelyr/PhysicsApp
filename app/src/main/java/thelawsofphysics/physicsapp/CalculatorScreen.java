@@ -4,12 +4,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.*;
 
-
-/**
- * Created by h1aih on 2017/10/5.
- * Screen for calculator
- */
-
 public class CalculatorScreen extends AppCompatActivity {
     @Override
     //methods to create calculator
@@ -141,7 +135,7 @@ public class CalculatorScreen extends AppCompatActivity {
 
             }
         });
-        // sin
+        // sin operation
         Button sinbtn= (Button) findViewById(R.id.SinButton);
         sinbtn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -157,7 +151,7 @@ public class CalculatorScreen extends AppCompatActivity {
 
             }
         });
-        //cos
+        //cos operation
         Button cosbtn= (Button) findViewById(R.id.CosButton);
         cosbtn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -173,7 +167,7 @@ public class CalculatorScreen extends AppCompatActivity {
 
             }
         });
-        //tan
+        //tan operation
         Button tanbtn= (Button) findViewById(R.id.TanButton);
         tanbtn.setOnClickListener(new View.OnClickListener(){
             @Override
