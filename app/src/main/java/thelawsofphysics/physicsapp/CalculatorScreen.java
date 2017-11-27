@@ -12,6 +12,7 @@ import android.widget.*;
 
 public class CalculatorScreen extends AppCompatActivity {
     @Override
+    //methods to create calculator
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator_screen);
@@ -21,7 +22,7 @@ public class CalculatorScreen extends AppCompatActivity {
             String equation = getIntent().getExtras().getString("equation");
             title.setText(equation);
         }
-
+        //add operation
         Button addbtn= (Button) findViewById(R.id.AddButton);
         addbtn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -35,7 +36,7 @@ public class CalculatorScreen extends AppCompatActivity {
                 resultTextview.setText(result+"");
             }
         });
-
+        //minus operation
         Button minusbtn= (Button) findViewById(R.id.MinusBotton);
         minusbtn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -49,7 +50,7 @@ public class CalculatorScreen extends AppCompatActivity {
                 resultTextview.setText(result+"");
             }
         });
-
+        //multiplication operation
         Button mulbtn= (Button) findViewById(R.id.MultiBotton);
         mulbtn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -63,6 +64,7 @@ public class CalculatorScreen extends AppCompatActivity {
                 resultTextview.setText(result+"");
             }
         });
+        //division operation
         Button divbtn= (Button) findViewById(R.id.DivideButton);
         divbtn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -77,6 +79,7 @@ public class CalculatorScreen extends AppCompatActivity {
 
             }
         });
+        //power operation
         Button pwrbtn= (Button) findViewById(R.id.PowerButton);
         pwrbtn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -91,6 +94,7 @@ public class CalculatorScreen extends AppCompatActivity {
 
             }
         });
+        //log operation
         Button logbtn= (Button) findViewById(R.id.LogButton);
         logbtn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -105,6 +109,7 @@ public class CalculatorScreen extends AppCompatActivity {
 
             }
         });
+        //ln operation
         Button lnbtn= (Button) findViewById(R.id.LnButton);
         lnbtn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -120,6 +125,7 @@ public class CalculatorScreen extends AppCompatActivity {
 
             }
         });
+        //sauqre root operation
         Button sqrbtn= (Button) findViewById(R.id.SquarertButton);
         sqrbtn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -135,6 +141,7 @@ public class CalculatorScreen extends AppCompatActivity {
 
             }
         });
+        // sin
         Button sinbtn= (Button) findViewById(R.id.SinButton);
         sinbtn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -150,6 +157,7 @@ public class CalculatorScreen extends AppCompatActivity {
 
             }
         });
+        //cos
         Button cosbtn= (Button) findViewById(R.id.CosButton);
         cosbtn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -165,6 +173,7 @@ public class CalculatorScreen extends AppCompatActivity {
 
             }
         });
+        //tan
         Button tanbtn= (Button) findViewById(R.id.TanButton);
         tanbtn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -180,6 +189,7 @@ public class CalculatorScreen extends AppCompatActivity {
 
             }
         });
+        // modulo operation
         Button modbtn= (Button) findViewById(R.id.ModuloButton);
         modbtn.setOnClickListener(new View.OnClickListener(){
             @Override
