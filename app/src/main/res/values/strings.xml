@@ -895,7 +895,7 @@
         <item>standard atmosphere</item>
     </string-array>
 
-    <string-array name="constantValues">
+    <string-array name="constantValuesMetric">
         <item>(-1)^(1/2)</item>
         <item>3.14159265358979323846264338327950288</item>
         <item>2.71828182845904523536028747135266249</item>
@@ -950,6 +950,60 @@
         <item>101325 Pa</item>
     </string-array>
 
+    <string-array name="constantValuesImperial">
+        <item>(-1)^(1/2)</item>
+        <item>3.14159265358979323846264338327950288</item>
+        <item>2.71828182845904523536028747135266249</item>
+        <item>0.57721566490153286060651209008240243</item>
+        <item>1.61803398874989484820458683436563811</item>
+        <item>0.26149721284764278375542683860869585</item>
+        <item>0.28016949902386913303</item>
+        <item>5.3025888*10^(−35) ft</item>
+        <item>4.8*10^(−8) lb</item>
+        <item>5.39116*10^(−44) s</item>
+        <item>1.875545956*10^(−18) C</item>
+        <item>1.416808*10^32 K</item>
+        <item>983571087 ft*s^(-1)</item>
+        <item>2.62756*10^(−8) inches^3*g^(−1)*s^(−2)</item>
+        <item>4.887*10^(−34) fpd*s</item>
+        <item>1.256637061*10^(−6)*N*A^(−2)</item>
+        <item>2.698756*10^(−12)*F*ft^(−1)</item>
+        <item>376.730313461Ω</item>
+        <item>8.9875517873681764*10^9 lb*feet^3*s^(−4)*A^(−2)</item>
+        <item>1.6021766208*10^(−19) C</item>
+        <item>9.274009994*10^(−24) J*T^(−1)</item>
+        <item>7.7480917310*10^(−5) S</item>
+        <item>12906.4037278 Ω</item>
+        <item>4.835978525*10^14 Hz*V^(−1)</item>
+        <item>2.067833831*10^(−15) Wb</item>
+        <item>5.050783699*10^(−27) J*T^(−1)</item>
+        <item>25812.8074555 Ω</item>
+        <item>1.736145759*10^(−10) feet</item>
+        <item>9.245211(19)*10^(−15) feet</item>
+        <item>2.0082729*10^(−30) lb</item>
+        <item>1.1663787*10^(−5) GeV^(−2)</item>
+        <item>4.359744650*10^(−18) J</item>
+        <item>1.672621898*10^(−27) lb</item>
+        <item>3.6369475486*10^(−4) ft^2*s^(−1)</item>
+        <item>1.660539040*10^(−27) lb</item>
+        <item>6.022140857*10^23 mol^(−1)</item>
+        <item>1.38064852*10^(−23) J*K^(−1)</item>
+        <item>96485.33289 C*mol^(−1)</item>
+        <item>3.741771790*10^(−16) W*ft^2</item>
+        <item>1.191042953*10^(−16) W*ft^2*s*r^(−1)</item>
+        <item>2.6867811*10^25 ft^(−3)</item>
+        <item>8.3144598 J*mol^(−1)*K^(−1)</item>
+        <item>3.9903127110*10^(−10) J*s*mol^(−1)</item>
+        <item>2.2413962*10^(−2) ft^3*mol^(−1)</item>
+        <item>5.670367*10^(−8) W*ft^(−2)*K^(−4)</item>
+        <item>2.8977729*10^(−3) ft*K</item>
+        <item>3.0029152*10^(−3) ft*K</item>
+        <item>4.835979*10^14 Hz*V^(−1)</item>
+        <item>25812.807 Ω</item>
+        <item>1*10^(−3) lb*mol^(−1)</item>
+        <item>9.80665 ft*s^(−2)</item>
+        <item>101325 Pa</item>
+    </string-array>
     <string-array name="CommonConstants">
         <item>i</item>
         <item>Imaginary unit</item>
