@@ -19,7 +19,7 @@ class SpecialClickableSpan extends ClickableSpan {
     @Override
     public void onClick(View widget) {
         //opens equation page if equal sign is clicked and sends it the equation
-        if(text.equals("="))
+        if(text.equals("=") || text.equals("≥") || text.equals("≈") || text.equals("≤"))
         {
             Intent startIntent = new Intent(myContext, Equation.class);
             TextView equation = (TextView)widget;
