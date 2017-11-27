@@ -29,10 +29,26 @@ public class CalculatorScreen extends AppCompatActivity {
             public void onClick(View view){
                 EditText firstNumEditText= (EditText) findViewById(R.id.FirstNumEditText);
                 EditText secondNumEditText= (EditText) findViewById(R.id.SecondNumEditText);
-                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
-                Double num1 = Double.parseDouble(firstNumEditText.getText().toString());
-                Double num2 = Double.parseDouble(secondNumEditText.getText().toString());
+                String Snum1=firstNumEditText.getText().toString();
+                String Snum2=secondNumEditText.getText().toString();
+                Double num1;
+                Double num2;
+                if(Snum1.isEmpty() )
+                {
+                    num1=0.0;
+                }
+                else{
+                    num1=Double.parseDouble(Snum1);
+                }
+                if(Snum2.isEmpty())
+                {
+                    num2=0.0;
+                }
+                else{
+                    num2=Double.parseDouble(Snum2);
+                }
                 Double result= num1 + num2;
+                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
                 resultTextview.setText(result+"");
             }
         });
@@ -43,10 +59,26 @@ public class CalculatorScreen extends AppCompatActivity {
             public void onClick(View view){
                 EditText firstNumEditText= (EditText) findViewById(R.id.FirstNumEditText);
                 EditText secondNumEditText= (EditText) findViewById(R.id.SecondNumEditText);
-                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
-                Double num1 = Double.parseDouble(firstNumEditText.getText().toString());
-                Double num2 = Double.parseDouble(secondNumEditText.getText().toString());
+                String Snum1=firstNumEditText.getText().toString();
+                String Snum2=secondNumEditText.getText().toString();
+                Double num1;
+                Double num2;
+                if(Snum1.isEmpty() )
+                {
+                    num1=0.0;
+                }
+                else{
+                    num1=Double.parseDouble(Snum1);
+                }
+                if(Snum2.isEmpty())
+                {
+                    num2=0.0;
+                }
+                else{
+                    num2=Double.parseDouble(Snum2);
+                }
                 Double result= num1 - num2;
+                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
                 resultTextview.setText(result+"");
             }
         });
@@ -57,10 +89,26 @@ public class CalculatorScreen extends AppCompatActivity {
             public void onClick(View view){
                 EditText firstNumEditText= (EditText) findViewById(R.id.FirstNumEditText);
                 EditText secondNumEditText= (EditText) findViewById(R.id.SecondNumEditText);
-                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
-                Double num1 = Double.parseDouble(firstNumEditText.getText().toString());
-                Double num2 = Double.parseDouble(secondNumEditText.getText().toString());
+                String Snum1=firstNumEditText.getText().toString();
+                String Snum2=secondNumEditText.getText().toString();
+                Double num1;
+                Double num2;
+                if(Snum1.isEmpty() )
+                {
+                    num1=0.0;
+                }
+                else{
+                    num1=Double.parseDouble(Snum1);
+                }
+                if(Snum2.isEmpty())
+                {
+                    num2=0.0;
+                }
+                else{
+                    num2=Double.parseDouble(Snum2);
+                }
                 Double result= num1 * num2;
+                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
                 resultTextview.setText(result+"");
             }
         });
@@ -71,10 +119,26 @@ public class CalculatorScreen extends AppCompatActivity {
             public void onClick(View view){
                 EditText firstNumEditText= (EditText) findViewById(R.id.FirstNumEditText);
                 EditText secondNumEditText= (EditText) findViewById(R.id.SecondNumEditText);
-                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
-                Double num1 = Double.parseDouble(firstNumEditText.getText().toString());
-                Double num2 = Double.parseDouble(secondNumEditText.getText().toString());
+                String Snum1=firstNumEditText.getText().toString();
+                String Snum2=secondNumEditText.getText().toString();
+                Double num1;
+                Double num2;
+                if(Snum1.isEmpty() )
+                {
+                    num1=0.0;
+                }
+                else{
+                    num1=Double.parseDouble(Snum1);
+                }
+                if(Snum2.isEmpty())
+                {
+                    num2=0.0;
+                }
+                else{
+                    num2=Double.parseDouble(Snum2);
+                }
                 Double result= num1 / num2;
+                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
                 resultTextview.setText(result+"");
 
             }
@@ -86,10 +150,26 @@ public class CalculatorScreen extends AppCompatActivity {
             public void onClick(View view){
                 EditText firstNumEditText= (EditText) findViewById(R.id.FirstNumEditText);
                 EditText secondNumEditText= (EditText) findViewById(R.id.SecondNumEditText);
-                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
-                Double num1 = Double.parseDouble(firstNumEditText.getText().toString());
-                Double num2 = Double.parseDouble(secondNumEditText.getText().toString());
+                String Snum1=firstNumEditText.getText().toString();
+                String Snum2=secondNumEditText.getText().toString();
+                Double num1;
+                Double num2;
+                if(Snum1.isEmpty() )
+                {
+                    num1=0.0;
+                }
+                else{
+                    num1=Double.parseDouble(Snum1);
+                }
+                if(Snum2.isEmpty())
+                {
+                    num2=0.0;
+                }
+                else{
+                    num2=Double.parseDouble(Snum2);
+                }
                 Double result=Math.pow(num1,num2);
+                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
                 resultTextview.setText(result+"");
 
             }
@@ -101,10 +181,26 @@ public class CalculatorScreen extends AppCompatActivity {
             public void onClick(View view){
                 EditText firstNumEditText= (EditText) findViewById(R.id.FirstNumEditText);
                 EditText secondNumEditText= (EditText) findViewById(R.id.SecondNumEditText);
-                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
-                Double num1 = Double.parseDouble(firstNumEditText.getText().toString());
-                Double num2 = Double.parseDouble(secondNumEditText.getText().toString());
+                String Snum1=firstNumEditText.getText().toString();
+                String Snum2=secondNumEditText.getText().toString();
+                Double num1;
+                Double num2;
+                if(Snum1.isEmpty() )
+                {
+                    num1=0.0;
+                }
+                else{
+                    num1=Double.parseDouble(Snum1);
+                }
+                if(Snum2.isEmpty())
+                {
+                    num2=0.0;
+                }
+                else{
+                    num2=Double.parseDouble(Snum2);
+                }
                 Double result=Math.log(num2)/Math.log(num1);
+                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
                 resultTextview.setText(result+"");
 
             }
@@ -116,11 +212,27 @@ public class CalculatorScreen extends AppCompatActivity {
             public void onClick(View view){
                 EditText firstNumEditText= (EditText) findViewById(R.id.FirstNumEditText);
                 EditText secondNumEditText= (EditText) findViewById(R.id.SecondNumEditText);
-                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
-                Double num1 = Double.parseDouble(firstNumEditText.getText().toString());
-                Double num2 = Double.parseDouble(secondNumEditText.getText().toString());
+                String Snum1=firstNumEditText.getText().toString();
+                String Snum2=secondNumEditText.getText().toString();
+                Double num1;
+                Double num2;
+                if(Snum1.isEmpty() )
+                {
+                    num1=0.0;
+                }
+                else{
+                    num1=Double.parseDouble(Snum1);
+                }
+                if(Snum2.isEmpty())
+                {
+                    num2=0.0;
+                }
+                else{
+                    num2=Double.parseDouble(Snum2);
+                }
                 Double result=Math.log(num1);
                 Double result2=Math.log(num2);
+                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
                 resultTextview.setText("1st:"+String.format("%.2f", result)+" 2nd:"+String.format("%.2f", result2));
 
             }
@@ -132,11 +244,27 @@ public class CalculatorScreen extends AppCompatActivity {
             public void onClick(View view){
                 EditText firstNumEditText= (EditText) findViewById(R.id.FirstNumEditText);
                 EditText secondNumEditText= (EditText) findViewById(R.id.SecondNumEditText);
-                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
-                Double num1 = Double.parseDouble(firstNumEditText.getText().toString());
-                Double num2 = Double.parseDouble(secondNumEditText.getText().toString());
+                String Snum1=firstNumEditText.getText().toString();
+                String Snum2=secondNumEditText.getText().toString();
+                Double num1;
+                Double num2;
+                if(Snum1.isEmpty() )
+                {
+                    num1=0.0;
+                }
+                else{
+                    num1=Double.parseDouble(Snum1);
+                }
+                if(Snum2.isEmpty())
+                {
+                    num2=0.0;
+                }
+                else{
+                    num2=Double.parseDouble(Snum2);
+                }
                 Double result=Math.sqrt(num1);
                 Double result2=Math.sqrt(num2);
+                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
                 resultTextview.setText("1st:"+String.format("%.2f", result)+" 2nd:"+String.format("%.2f", result2));
 
             }
@@ -148,11 +276,27 @@ public class CalculatorScreen extends AppCompatActivity {
             public void onClick(View view){
                 EditText firstNumEditText= (EditText) findViewById(R.id.FirstNumEditText);
                 EditText secondNumEditText= (EditText) findViewById(R.id.SecondNumEditText);
-                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
-                Double num1 = Double.parseDouble(firstNumEditText.getText().toString());
-                Double num2 = Double.parseDouble(secondNumEditText.getText().toString());
+                String Snum1=firstNumEditText.getText().toString();
+                String Snum2=secondNumEditText.getText().toString();
+                Double num1;
+                Double num2;
+                if(Snum1.isEmpty() )
+                {
+                    num1=0.0;
+                }
+                else{
+                    num1=Double.parseDouble(Snum1);
+                }
+                if(Snum2.isEmpty())
+                {
+                    num2=0.0;
+                }
+                else{
+                    num2=Double.parseDouble(Snum2);
+                }
                 Double result= Math.sin(num1);
                 Double result2=Math.sin(num2);
+                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
                 resultTextview.setText("1st:"+String.format("%.2f", result)+" 2nd:"+String.format("%.2f", result2));
 
             }
@@ -164,11 +308,27 @@ public class CalculatorScreen extends AppCompatActivity {
             public void onClick(View view){
                 EditText firstNumEditText= (EditText) findViewById(R.id.FirstNumEditText);
                 EditText secondNumEditText= (EditText) findViewById(R.id.SecondNumEditText);
-                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
-                Double num1 = Double.parseDouble(firstNumEditText.getText().toString());
-                Double num2 = Double.parseDouble(secondNumEditText.getText().toString());
+                String Snum1=firstNumEditText.getText().toString();
+                String Snum2=secondNumEditText.getText().toString();
+                Double num1;
+                Double num2;
+                if(Snum1.isEmpty() )
+                {
+                    num1=0.0;
+                }
+                else{
+                    num1=Double.parseDouble(Snum1);
+                }
+                if(Snum2.isEmpty())
+                {
+                    num2=0.0;
+                }
+                else{
+                    num2=Double.parseDouble(Snum2);
+                }
                 Double result=Math.cos(num1);
                 Double result2=Math.cos(num2);
+                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
                 resultTextview.setText("1st:"+String.format("%.2f", result)+" 2nd:"+String.format("%.2f", result2));
 
             }
@@ -180,11 +340,27 @@ public class CalculatorScreen extends AppCompatActivity {
             public void onClick(View view){
                 EditText firstNumEditText= (EditText) findViewById(R.id.FirstNumEditText);
                 EditText secondNumEditText= (EditText) findViewById(R.id.SecondNumEditText);
-                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
-                Double num1 = Double.parseDouble(firstNumEditText.getText().toString());
-                Double num2 = Double.parseDouble(secondNumEditText.getText().toString());
+                String Snum1=firstNumEditText.getText().toString();
+                String Snum2=secondNumEditText.getText().toString();
+                Double num1;
+                Double num2;
+                if(Snum1.isEmpty() )
+                {
+                    num1=0.0;
+                }
+                else{
+                    num1=Double.parseDouble(Snum1);
+                }
+                if(Snum2.isEmpty())
+                {
+                    num2=0.0;
+                }
+                else{
+                    num2=Double.parseDouble(Snum2);
+                }
                 Double result=Math.tan(num1);
                 Double result2=Math.tan(num2);
+                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
                 resultTextview.setText("1st:"+String.format("%.2f", result)+" 2nd:"+String.format("%.2f", result2));
 
             }
@@ -196,10 +372,26 @@ public class CalculatorScreen extends AppCompatActivity {
             public void onClick(View view){
                 EditText firstNumEditText= (EditText) findViewById(R.id.FirstNumEditText);
                 EditText secondNumEditText= (EditText) findViewById(R.id.SecondNumEditText);
-                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
-                Double num1 = Double.parseDouble(firstNumEditText.getText().toString());
-                Double num2 = Double.parseDouble(secondNumEditText.getText().toString());
+                String Snum1=firstNumEditText.getText().toString();
+                String Snum2=secondNumEditText.getText().toString();
+                Double num1;
+                Double num2;
+                if(Snum1.isEmpty() )
+                {
+                    num1=0.0;
+                }
+                else{
+                    num1=Double.parseDouble(Snum1);
+                }
+                if(Snum2.isEmpty())
+                {
+                    num2=0.0;
+                }
+                else{
+                    num2=Double.parseDouble(Snum2);
+                }
                 Double result=num1%num2;
+                TextView resultTextview = (TextView) findViewById(R.id.resultTextView);
                 resultTextview.setText(""+result);
 
             }

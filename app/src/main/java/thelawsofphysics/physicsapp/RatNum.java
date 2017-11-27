@@ -13,11 +13,7 @@ package thelawsofphysics.physicsapp;
  Examples of RatNums include "-1/13", "53/7", "4", "NaN", and "0".
  */
 
-// ("immutable" is a common term for which "Effective Java" (p. 63)
-// provides the following definition: "An immutable class is simply
-// a class whose instances cannot be modified.  All of the information
-// contained in each instance is provided when it is created and is
-// fixed for the lifetime of the object.")
+
 public final class RatNum extends Number implements Comparable<RatNum> {
 
     private final int numer;
