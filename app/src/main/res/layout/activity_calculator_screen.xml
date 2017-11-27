@@ -214,11 +214,43 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="40dp"
         android:text="Calculator"
         android:textColor="@android:color/black"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/SigeditText"
+        android:layout_width="157dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="176dp"
+        android:ems="10"
+        android:hint="enter significant digits"
+        android:inputType="textPersonName"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/AddButton"
+        app:layout_constraintEnd_toStartOf="@+id/sigbutton"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.083" />
+
+    <Button
+        android:id="@+id/sigbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
+        android:layout_marginTop="8dp"
+        android:text="change "
+        app:layout_constraintBottom_toTopOf="@+id/SinButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SecondNumEditText" />
 </android.support.constraint.ConstraintLayout>
