@@ -28,6 +28,7 @@
     <string name="similar_equations">Similar Equations</string>
     <string name="problem_search">Problem Search</string>
     <string name="recently_used">Recently Used</string>
+    <string name="derivative_calculator">Derivative Calculator</string>
 
     <string-array name="equations">
         <item>v̅ = Δs / Δt</item>

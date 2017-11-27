@@ -32,19 +32,41 @@ public class Equation extends AppCompatActivity {
             substituteEquation.setText(equation);
         }
 
-        //Stores equation in recently used equations file
-        FileOutputStream outputStream;
+        //Stores equation in recently used equations file if it is not already there
         try {
-            outputStream = openFileOutput("Recent", MODE_APPEND);
-            String aEquation = substituteEquation.getText().toString() + "\n";
-            outputStream.write(aEquation.getBytes());
-            outputStream.close();
-        } catch (Exception e) {
+            //Reads in equations from file
+            ArrayList<String> equations = new ArrayList<>();
+            String aEquation;
+            FileInputStream inputStream = openFileInput("Recent");
+            InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+            while ((aEquation = bufferedReader.readLine())!=null)
+            {
+                equations.add(aEquation);
+            }
+            //Makes sure equation is not in file
+            if(!equations.contains(substituteEquation.getText().toString()))
+            {
+                FileOutputStream outputStream;
+                try {
+                    outputStream = openFileOutput("Recent", MODE_APPEND);
+                    aEquation = substituteEquation.getText().toString() + "\n";
+                    outputStream.write(aEquation.getBytes());
+                    outputStream.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
-        //Makes sure there are only 10 string in file
+        //Makes sure there are only 10 strings in file
         try {
+            //Reads in strings from file
             ArrayList<String> equations = new ArrayList<>();
             String aEquation;
             FileInputStream inputStream = openFileInput("Recent");
@@ -55,9 +77,11 @@ public class Equation extends AppCompatActivity {
                 equations.add(aEquation);
             }
 
+            //If there are more than 10 equations deletes the rest
             if(equations.size() > 10)
             {
-                //delete file
+                //deletes old file
+                FileOutputStream outputStream;
                 try {
                     outputStream = openFileOutput("Recent", MODE_PRIVATE);
                     outputStream.close();
@@ -118,6 +142,7 @@ public class Equation extends AppCompatActivity {
                 result.setText("");
                 String equationWrite = substituteEquation.getText().toString() + "\n";
 
+                // find if the equation is already added into the favorites
                 ArrayList<String> flist = new ArrayList<>();
                 try {
                     String message;
@@ -134,10 +159,10 @@ public class Equation extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
                 if (flist.contains(substituteEquation.getText().toString())) {
                     result.setText("Equation Already Added");
                 }
+                // add the equation to favorites
                 else {
                     String filename = "Favorites";
                     try{
