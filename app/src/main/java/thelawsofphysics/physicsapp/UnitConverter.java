@@ -46,6 +46,7 @@ public class UnitConverter extends AppCompatActivity {
         expression = (EditText)findViewById(R.id.editExpression);
         result = (EditText)findViewById(R.id.convertresult);
 
+        // read the unit data from string,xml
         lengthUnits = getResources().getStringArray(R.array.lengthUnits);
         areaUnits = getResources().getStringArray(R.array.areaUnits);
         powerUnits = getResources().getStringArray(R.array.powerUnits);
@@ -58,6 +59,7 @@ public class UnitConverter extends AppCompatActivity {
         alternativeUnits1 = getResources().getStringArray(R.array.alternativeUnits1);
     }
 
+    // convert the normal units
     public void convert(View v) {
         Boolean error = true;
         value = new Double(expression.getText().toString());
@@ -84,6 +86,14 @@ public class UnitConverter extends AppCompatActivity {
         }
     }
 
+    /**
+     * find the normal units which can be calculated by ratio
+     *
+     * @param u0 First unit.
+     * @param u1 Second unit.
+     * @param units unit data
+     * @return  if the unit is found and converted
+     */
     private boolean findUnit(String u0, String u1, String []units) {
         Double value0;
         Double value1;
@@ -98,6 +108,14 @@ public class UnitConverter extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * find the special units which cannot be calculated by ratio
+     *
+     * @param u0 First unit.
+     * @param u1 Second unit.
+     * @param units unit data
+     * @return  if the unit is found and converted
+     */
     private boolean findTempUnit(String u0, String u1, String []units) {
         Double value0;
         Double value1;
@@ -118,7 +136,12 @@ public class UnitConverter extends AppCompatActivity {
         return true;
     }
 
-
+    /**
+     * convert non standard unit names to standard ones
+     *
+     * @param un the name of the unit given by the user
+     * @return  the standard unit symbol
+     */
     private String formatUnit(String un) {
         if (Arrays.asList(alternativeUnits1).contains(un)) {
             return alternativeUnits0[Arrays.asList(alternativeUnits1).indexOf(un)];
