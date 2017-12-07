@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.InputType;
 import android.view.KeyEvent;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
@@ -18,6 +19,8 @@ public class ProblemSearch extends AppCompatActivity {
 
         //Takes user input then finds all variables used and sends them to search bar
         EditText input = (EditText)findViewById(R.id.problemInput);
+        input.setImeOptions(EditorInfo.IME_ACTION_DONE);
+        input.setRawInputType(InputType.TYPE_CLASS_TEXT);
         input.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 
             @Override
@@ -36,7 +39,7 @@ public class ProblemSearch extends AppCompatActivity {
                         {
                             for(int k = 0; k < search.length; k++)
                             {
-                                if(variables[j].equalsIgnoreCase(search[k]) && !result.contains(variables[j]))
+                                if(variables[j].equalsIgnoreCase(search[k]) && !result.toLowerCase().contains(variables[j].toLowerCase()))
                                 {
                                     result += variables[j] + ",";
                                 }
