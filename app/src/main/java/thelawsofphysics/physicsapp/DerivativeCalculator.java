@@ -25,5 +25,17 @@ public class DerivativeCalculator extends AppCompatActivity {
                 resultTextview.setText(result);
             }
         });
+        Button inbtn= (Button) findViewById(R.id.Integralbutton);
+        inbtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                EditText expressiontext= (EditText) (findViewById(R.id.PolyEditText));
+                String expression= expressiontext.getText().toString();
+                TextView resultTextview = (TextView) findViewById(R.id.dresultTextView);
+                RatPoly poly=RatPoly.valueOf(expression);
+                String result= poly.antiDifferentiate(RatNum.ZERO).toString();
+                resultTextview.setText(result);
+            }
+        });
     }
 }
