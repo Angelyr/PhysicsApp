@@ -541,16 +541,24 @@ public class MAdapter<T> extends BaseAdapter implements Filterable, ThemedSpinne
                         final T value = values.get(i);  //Gets the value of that index
                         final String valueText = value.toString();
                         final String[] help = mHelperValues.get(i).toString().split(",");
-                        // First match against the whole, non-splitted value
                         if (prefixString.length() > 1) {
                             String[] prefixArray = prefixString.split(",");
                             for (String aPrefixArray : prefixArray) {
 
                                 for (String aHelp : help) {
-                                    if (aPrefixArray.equals(aHelp)) {
-                                        matching++;
-                                        break;
+                                    if(aPrefixArray.length() > 1){
+                                        if (aPrefixArray.toLowerCase().equals(aHelp.toLowerCase()) || aHelp.toLowerCase().startsWith(aPrefixArray.toLowerCase())) {
+                                            matching++;
+                                            break;
+                                        }
                                     }
+                                    else{
+                                        if (aPrefixArray.equals(aHelp) || aHelp.startsWith(aPrefixArray)) {
+                                            matching++;
+                                            break;
+                                        }
+                                    }
+
                                 }
                             }
                             if (matching == prefixArray.length) {
@@ -558,7 +566,7 @@ public class MAdapter<T> extends BaseAdapter implements Filterable, ThemedSpinne
                             }
                         } else {
                             for (String aHelp : help) {
-                                if (prefixString.equals(aHelp)) {
+                                if (prefixString.equals(aHelp) || aHelp.startsWith(prefixString)) {
                                     newValues.add(value);
                                     break;
                                 }

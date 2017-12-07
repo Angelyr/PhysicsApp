@@ -1183,7 +1183,7 @@
         <item>0.6213711922</item>
         <item>yard</item>
         <item>1093.613298</item>
-        <item>feet</item>
+        <item>foot</item>
         <item>3280.839895</item>
         <item>inch</item>
         <item>39370.07874</item>
@@ -1214,7 +1214,7 @@
         <item>247.1053815</item>
         <item>square yard</item>
         <item>1195990.046</item>
-        <item>square feet</item>
+        <item>square foot</item>
         <item>10763910.42</item>
         <item>square inch</item>
         <item>1550003100</item>
@@ -1335,7 +1335,7 @@
         <item>millimeter</item>
         <item>mile</item>
         <item>yard</item>
-        <item>feet</item>
+        <item>foot</item>
         <item>inch</item>
         <item>league</item>
         <item>furlong</item>
@@ -1350,7 +1350,7 @@
         <item>square mile</item>
         <item>acre</item>
         <item>square yard</item>
-        <item>square feet</item>
+        <item>square foot</item>
         <item>square inch</item>
 
         <item>kilowatt</item>
@@ -1456,8 +1456,8 @@
         <item>mach</item>
 
         <item>k</item>
-        <item>°C</item>
-        <item>°F</item>
+        <item>C</item>
+        <item>F</item>
 
         <item>m^3</item>
         <item>l</item>
@@ -1480,6 +1480,83 @@
         <item>ton</item>
         <item>ton short</item>
         <item>st</item>
+    </string-array>
+
+    <string-array name="alternativeUnits2">
+        <item>kilometers</item>
+        <item>meters</item>
+        <item>centimeters</item>
+        <item>millimeters</item>
+        <item>miles</item>
+        <item>yards</item>
+        <item>feet</item>
+        <item>inches</item>
+        <item>leagues</item>
+        <item>furlongs</item>
+        <item>rods</item>
+        <item>chains</item>
+
+        <item>square kilometers</item>
+        <item>hectares</item>
+        <item>are</item>
+        <item>squsare meters</item>
+        <item>square centimeters</item>
+        <item>square miles</item>
+        <item>acre</item>
+        <item>square yards</item>
+        <item>square feet</item>
+        <item>square inches</item>
+
+        <item>kilowatts</item>
+        <item>btu/h</item>
+        <item>horsepower</item>
+        <item>watts</item>
+
+        <item>kilo pascals</item>
+        <item>atmosphere</item>
+        <item>bars</item>
+        <item>millibars</item>
+        <item>inch mercury</item>
+        <item>millimeter mercury</item>
+        <item>mega pascals</item>
+        <item>pascals</item>
+        <item>pound/sq foot</item>
+        <item>pound/sq inches</item>
+
+        <item>meter per second</item>
+        <item>kilometer per hour</item>
+        <item>mile per hour</item>
+        <item>feet per minute</item>
+        <item>feet per second</item>
+        <item>knots</item>
+        <item>speed of light</item>
+        <item>speed of sound</item>
+
+        <item>k</item>
+        <item>°C</item>
+        <item>°F</item>
+
+        <item>cubic meters</item>
+        <item>liters</item>
+        <item>deciliters</item>
+        <item>centiliters</item>
+        <item>cubic yards</item>
+        <item>cubic feet</item>
+        <item>cubic inches</item>
+        <item>us barrels</item>
+        <item>us liquid gallons</item>
+        <item>us fluid ounces</item>
+        <item>us pints</item>
+        <item>us quarts</item>
+
+        <item>kilograms</item>
+        <item>grams</item>
+        <item>milligrams</item>
+        <item>pounds</item>
+        <item>ounces</item>
+        <item>tons</item>
+        <item>tons short</item>
+        <item>stones</item>
     </string-array>
 
     <string-array name="favoriteEquations">
