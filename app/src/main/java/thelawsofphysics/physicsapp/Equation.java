@@ -182,7 +182,7 @@ public class Equation extends AppCompatActivity {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    result.setText("Added To Favorite");
+                    result.setText("Added To Favorites");
                     Intent startIntent = new Intent(getApplicationContext(), Favorite.class);
                     startActivity(startIntent);
                 }

@@ -26,6 +26,7 @@ public class UnitConverter extends AppCompatActivity {
     String temperatureUnits[];
     String alternativeUnits0[];
     String alternativeUnits1[];
+    String alternativeUnits2[];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,7 @@ public class UnitConverter extends AppCompatActivity {
         temperatureUnits = getResources().getStringArray(R.array.temperatureUnits);
         alternativeUnits0 = getResources().getStringArray(R.array.alternativeUnits0);
         alternativeUnits1 = getResources().getStringArray(R.array.alternativeUnits1);
+        alternativeUnits2 = getResources().getStringArray(R.array.alternativeUnits2);
     }
 
     // convert the normal units
@@ -78,6 +80,12 @@ public class UnitConverter extends AppCompatActivity {
             result.setText("Invalid Input");
         }
         else {
+            if (new Double(expression.getText().toString()) != 1) {
+                u0 = findPlural(u0);
+            }
+            if (new Double(value) != 1) {
+                u1 = findPlural(u1);
+            }
             result.setText(String.format("Result:\n %.3f %s\n   =\n%.3f %s",
                            new Double(expression.getText().toString()), u0, new Double(value), u1));
         }
@@ -114,6 +122,9 @@ public class UnitConverter extends AppCompatActivity {
      * @return  if the unit is found and converted
      */
     private boolean findTempUnit(String u0, String u1, String []units) {
+        if ((!Arrays.asList(units).contains(u0)) && (!Arrays.asList(units).contains(u1))) {
+            return true;
+        }
         Double value0;
         Double value1;
         if (u0.equals("fahrenheit")){
@@ -127,10 +138,9 @@ public class UnitConverter extends AppCompatActivity {
                 if (u1.equals("fahrenheit")) {
                     value = value * 1.8 + 32;
                 }
-                return false;
             }
         }
-        return true;
+        return false;
     }
 
     /**
@@ -142,6 +152,21 @@ public class UnitConverter extends AppCompatActivity {
     private String formatUnit(String un) {
         if (Arrays.asList(alternativeUnits1).contains(un)) {
             return alternativeUnits0[Arrays.asList(alternativeUnits1).indexOf(un)];
+        }
+        if (Arrays.asList(alternativeUnits2).contains(un)) {
+            return alternativeUnits0[Arrays.asList(alternativeUnits2).indexOf(un)];
+        }
+        return un;
+    }
+    /**
+     * convert standard unit names to plural ones
+     *
+     * @param un the standard unit symbol
+     * @return  the plural of standard unit symbol
+     */
+    private String findPlural(String un) {
+        if (Arrays.asList(alternativeUnits0).contains(un)) {
+            return alternativeUnits2[Arrays.asList(alternativeUnits0).indexOf(un)];
         }
         return un;
     }

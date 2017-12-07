@@ -525,6 +525,7 @@ public final class RatPoly {
             RatNum coefficient;
             int exponent;
         }
+        if ((polyStr.indexOf("+")<0 || polyStr.indexOf("*")<0) && polyStr.matches(".*[a-zA-Z]+.*")) return RatPoly.ZERO;
         if (polyStr.equals("0")) return RatPoly.ZERO;
         if (polyStr.equals("NaN")) return RatPoly.NaN;
 
