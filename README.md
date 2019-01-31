@@ -3,3 +3,6 @@ Provides physics students with funcitons that will help them in physics class. T
 
 # Download
 https://play.google.com/store/apps/details?id=thelawsofphysics.physicsapp&hl=en
+
+# Documentation
+https://drive.google.com/drive/folders/0BzJsniPi8c7qbzRzT0gwWlVUVWM?usp=sharing
